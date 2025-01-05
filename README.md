@@ -7,19 +7,19 @@ The overall project structure has been taken from [NeoStandard](https://github.c
 ## Usage
 
 ```shell
-yarn add -D @ildella/nostandard
+yarn add -D eslint-nostandard
 
 # Or
-pnpm add -D @ildella/nostandard
+pnpm add -D eslint-nostandard
 
 # Or, if you are an horrible person:
-npm install -D @ildella/nostandard
+npm install -D eslint-nostandard
 ```
 
 And this is and example on how to use it in your `eslint-config.js`.
 
 ```js
-import nostandard from '@ildella/nostandard'
+import nostandard from 'eslint-nostandard'
 
 export default [
   {

@@ -121,17 +121,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ildella/nostandard@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@ildella/nostandard@workspace:."
-  dependencies:
-    "@eslint/js": "npm:^9.17.0"
-    "@stylistic/eslint-plugin-js": "npm:2.12.1"
-    eslint: "npm:9.17.0"
-    globals: "npm:^15.14.0"
-  languageName: unknown
-  linkType: soft
-
 "@stylistic/eslint-plugin-js@npm:2.12.1":
   version: 2.12.1
   resolution: "@stylistic/eslint-plugin-js@npm:2.12.1"
@@ -297,6 +286,17 @@ __metadata:
   checksum: 10c0/9497d4dd307d845bd7f75180d8188bb17ea8c151c1edbf6b6717c100e104d629dc2dfb687686181b0f4b7d732c7dfdc4d5e7a8ff72de1b0ca283a75bbb3a9cd9
   languageName: node
   linkType: hard
+
+"eslint-nostandard@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "eslint-nostandard@workspace:."
+  dependencies:
+    "@eslint/js": "npm:^9.17.0"
+    "@stylistic/eslint-plugin-js": "npm:2.12.1"
+    eslint: "npm:9.17.0"
+    globals: "npm:^15.14.0"
+  languageName: unknown
+  linkType: soft
 
 "eslint-scope@npm:^8.2.0":
   version: 8.2.0
