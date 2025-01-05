@@ -16,7 +16,7 @@ pnpm add -D @ildella/nostandard
 npm install -D @ildella/nostandard
 ```
 
-And this is and exampl on how to use it in your `eslint-config.js`.
+And this is and example on how to use it in your `eslint-config.js`.
 
 ```js
 import nostandard from '@ildella/nostandard'
