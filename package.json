@@ -1,6 +1,6 @@
 {
   "name": "eslint-nostandard",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Eslint standard for bad people.",
   "license": "MIT",
   "homepage": "https://github.com/ildella/nostandard",
@@ -10,7 +10,7 @@
   },
   "author": {
     "name": "Daniele Dellafiore",
-    "url": "https://ildella.net/"
+    "url": "https://linktr.ee/ildella/"
   },
   "keywords": [
     "eslint",
@@ -30,12 +30,11 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "@eslint/js": "^9.17.0",
-    "@stylistic/eslint-plugin-js": "3.1.0",
-    "globals": "^15.14.0"
+    "@eslint/js": "^9",
+    "@stylistic/eslint-plugin-js": "^3",
+    "globals": "^15"
   },
   "devDependencies": {
-    "eslint": "9.20.0"
-  },
-  "stableVersion": "0.3.1"
+    "eslint": "^9"
+  }
 }
