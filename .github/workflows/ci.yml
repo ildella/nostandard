@@ -18,6 +18,14 @@ jobs:
         with:
           node-version: '22.x'
 
+      - name: Enable Corepack
+        shell: bash
+        run: |
+          node --version
+          corepack --version
+          corepack enable
+          corepack yarn --version
+
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
