@@ -82,8 +82,8 @@ test('multiline-ternary allows always-multiline', () => {
   expect(hits).toHaveLength(0)
 })
 
-test('object-curly-newline enforces minProperties 3', () => {
-  const code = 'const obj = { a: 1, b: 2, c: 3 }\n'
+test('object-curly-newline enforces minProperties 4', () => {
+  const code = 'const obj = { a: 1, b: 2, c: 3, d: 4 }\n'
   const messages = lint(code)
   const hits = findRule(
     messages, '@stylistic/js/object-curly-newline',
