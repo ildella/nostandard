@@ -1,6 +1,6 @@
 {
   "name": "eslint-nostandard",
-  "version": "0.5.0",
+  "version": "0.6.0-0",
   "description": "Eslint standard for bad people.",
   "license": "MIT",
   "homepage": "https://github.com/ildella/nostandard",
@@ -58,5 +58,6 @@
     "globals": "^15",
     "svelte": "5.50.0",
     "vitest": "4.0.18"
-  }
+  },
+  "stableVersion": "0.5.0"
 }
