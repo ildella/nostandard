@@ -109,8 +109,8 @@ test('style: no-extra-parens is warn with nestedBinaryExpressions off', () => {
     {nestedBinaryExpressions: false}])
 })
 
-test('style: max-len defaults to 100', () => {
+test('style: max-len defaults to 90', () => {
   const [, style] = nostandard()
   const maxLen = style.rules['@stylistic/js/max-len']
-  expect(maxLen[1].code).toBe(100)
+  expect(maxLen[1].code).toBe(90)
 })
