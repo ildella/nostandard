@@ -2,7 +2,8 @@
 
 module.exports = require('./lib/main').nostandard
 
-// module.exports.resolveIgnoresFromGitignore = require('./lib/resolve-gitignore').resolveIgnoresFromGitignore
+// module.exports.resolveIgnoresFromGitignore =
+//   require('./lib/resolve-gitignore').resolveIgnoresFromGitignore
 
 module.exports.plugins = /** @type {const} */ {
   get '@stylistic/js' () {
