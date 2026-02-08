@@ -97,3 +97,98 @@ test('style: max-len defaults to 90', () => {
   const maxLen = style.rules['@stylistic/js/max-len']
   expect(maxLen[1].code).toBe(90)
 })
+
+test('configs.svelte is an array', () => {
+  const {svelte} = nostandard.configs
+  expect(Array.isArray(svelte)).toBe(true)
+  expect(svelte.length).toBeGreaterThanOrEqual(2)
+})
+
+test('configs.svelte last element is nostandard/svelte', () => {
+  const {svelte} = nostandard.configs
+  const custom = svelte.at(-1)
+  expect(custom.name).toBe('nostandard/svelte')
+})
+
+test('svelte config targets .svelte and .svelte.js', () => {
+  const {svelte} = nostandard.configs
+  const custom = svelte.at(-1)
+  expect(custom.files).toEqual(
+    ['**/*.svelte', '**/*.svelte.js'],
+  )
+})
+
+test('svelte config has custom svelte rules', () => {
+  const {svelte} = nostandard.configs
+  const custom = svelte.at(-1)
+  expect(
+    custom.rules['svelte/html-closing-bracket-new-line'],
+  ).toBeDefined()
+  expect(
+    custom.rules['svelte/indent'],
+  ).toBeDefined()
+  expect(
+    custom.rules['svelte/max-attributes-per-line'],
+  ).toBeDefined()
+  expect(
+    custom.rules['svelte/no-dom-manipulating'],
+  ).toBe('error')
+})
+
+test('svelte config overrides base rules for svelte context', () => {
+  const {svelte} = nostandard.configs
+  const custom = svelte.at(-1)
+  expect(custom.rules['no-return-assign']).toBe('off')
+  expect(custom.rules['prefer-const']).toBe('off')
+  expect(
+    custom.rules['@stylistic/js/indent'],
+  ).toBe('off')
+  expect(
+    custom.rules['@stylistic/js/max-len'],
+  ).toBe('error')
+})
+
+test('configs.vitest exists and is named', () => {
+  const {vitest} = nostandard.configs
+  expect(vitest).toBeDefined()
+  expect(vitest.name).toBe('nostandard/vitest')
+})
+
+test('vitest config targets test files', () => {
+  const {vitest} = nostandard.configs
+  expect(vitest.files).toEqual(
+    ['tests/**/*.js', '**/*.test.js'],
+  )
+})
+
+test('vitest config has vitest plugin', () => {
+  const {vitest} = nostandard.configs
+  expect(vitest.plugins.vitest).toBeDefined()
+})
+
+test('vitest config disables no-undefined', () => {
+  const {vitest} = nostandard.configs
+  expect(vitest.rules['no-undefined']).toBe('off')
+})
+
+test('vitest config provides test globals', () => {
+  const {vitest} = nostandard.configs
+  const globals = vitest.languageOptions.globals
+  expect(globals.test).toBeDefined()
+  expect(globals.expect).toBeDefined()
+  expect(globals.vi).toBeDefined()
+  expect(globals.beforeAll).toBeDefined()
+})
+
+test('vitest config has custom rule overrides', () => {
+  const {vitest} = nostandard.configs
+  expect(
+    vitest.rules['vitest/prefer-expect-resolves'],
+  ).toBe('warn')
+  expect(
+    vitest.rules['vitest/no-commented-out-tests'],
+  ).toBe('warn')
+  expect(
+    vitest.rules['vitest/max-nested-describe'],
+  ).toEqual(['error', {max: 1}])
+})

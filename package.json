@@ -17,7 +17,7 @@
     "configuration"
   ],
   "engines": {
-    "node": "^18.18.0 || ^20.9.0 || >=22.0.0"
+    "node": "^20.19.0 || ^22.13.0 || >=24"
   },
   "packageManager": "yarn@4.12.0+sha512.f45ab632439a67f8bc759bf32ead036a1f413287b9042726b7cc4818b7b49e14e9423ba49b18f9e06ea4941c1ad062385b1d8760a8d5091a1a31e5f6219afca8",
   "main": "index.js",
@@ -33,13 +33,30 @@
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
-  "dependencies": {
-    "@eslint/js": "^9",
-    "@stylistic/eslint-plugin-js": "^3",
-    "globals": "^15"
+  "peerDependencies": {
+    "@eslint/js": ">=9",
+    "@stylistic/eslint-plugin-js": ">=3",
+    "@vitest/eslint-plugin": ">=1",
+    "eslint": ">=9",
+    "eslint-plugin-svelte": ">=3",
+    "globals": ">=15"
+  },
+  "peerDependenciesMeta": {
+    "@vitest/eslint-plugin": {
+      "optional": true
+    },
+    "eslint-plugin-svelte": {
+      "optional": true
+    }
   },
   "devDependencies": {
-    "eslint": "^9",
+    "@eslint/js": "^10",
+    "@stylistic/eslint-plugin-js": "^3",
+    "@vitest/eslint-plugin": "^1",
+    "eslint": "^10",
+    "eslint-plugin-svelte": "^3",
+    "globals": "^15",
+    "svelte": "5.50.0",
     "vitest": "4.0.18"
   },
   "stableVersion": "0.4.0"
