@@ -2,10 +2,10 @@ import {createRequire} from 'node:module'
 
 const require = createRequire(import.meta.url)
 const {Linter} = require('eslint')
-const {nostandard} = require('../lib/main')
+const nostandard = require('../index')
 
 const linter = new Linter()
-const configs = nostandard()
+const configs = nostandard.configs.recommended
 
 const lint = code => linter.verify(code, configs)
 const findRule = (messages, ruleId) =>

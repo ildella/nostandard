@@ -26,7 +26,13 @@ export default [
     name: 'Your project name',
     // ...
   },
-  ...nostandard(),
+  // Use recommended preset (base + style rules)
+  ...nostandard.configs.recommended,
+
+  // Or compose manually:
+  // nostandard.configs.base,
+  // nostandard.configs.style,
+
   {
     // languageOptions: {...},
     // plugins: {...},
@@ -39,7 +45,7 @@ export default [
     // rules: {...},
   },
 ]
-````
+```
 
 ## Why not NeoStandard then?
 

@@ -1,7 +1,7 @@
-const self = require('./')
-const started = self({})
+const nostandard = require('./')
+
 module.exports = [
-  ...started,
+  ...nostandard.configs.recommended,
   {
     files: ['tests/**/*.js'],
     languageOptions: {
