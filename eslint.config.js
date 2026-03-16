@@ -1,7 +1,7 @@
-const nostandard = require('./')
+import {nostandard} from './src/index.js'
 
-module.exports = [
-  ...nostandard.configs.recommended,
+export default [
+  ...nostandard.recommended,
   {
     files: ['tests/**/*.js'],
     languageOptions: {

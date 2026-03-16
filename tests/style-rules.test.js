@@ -1,11 +1,8 @@
-import {createRequire} from 'node:module'
-
-const require = createRequire(import.meta.url)
-const {Linter} = require('eslint')
-const nostandard = require('../index')
+import {Linter} from 'eslint'
+import {nostandard} from '../src/index.js'
 
 const linter = new Linter()
-const configs = nostandard.configs.recommended
+const configs = nostandard.recommended
 
 const lint = code => linter.verify(code, configs)
 const findRule = (messages, ruleId) =>

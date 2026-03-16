@@ -1,11 +1,8 @@
-import {createRequire} from 'node:module'
-
-const require = createRequire(import.meta.url)
-const {Linter} = require('eslint')
-const nostandard = require('../index')
+import {Linter} from 'eslint'
+import {nostandard} from '../src/index.js'
 
 const linter = new Linter()
-const configs = [nostandard.configs.base]
+const configs = [nostandard.base]
 
 const lint = code => linter.verify(code, configs)
 const findRule = (messages, ruleId) =>
@@ -20,7 +17,7 @@ test('no-undefined fires as error', () => {
 
 test('no-inner-declarations warns in non-strict script mode', () => {
   const scriptLinter = new Linter()
-  const scriptConfigs = [nostandard.configs.base].map(config => ({
+  const scriptConfigs = [nostandard.base].map(config => ({
     ...config,
     languageOptions: {
       ...config.languageOptions,

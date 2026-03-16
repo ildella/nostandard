@@ -1,25 +1,19 @@
-const js = require('@eslint/js')
-const globals = require('globals')
+import js from '@eslint/js'
+import globals from 'globals'
 
-module.exports = {
+export const base = {
   name: 'nostandard/base',
 
   languageOptions: {
-    // ecmaVersion: 2024, // defaults to latest
-    // sourceType: 'module',
+    sourceType: 'module',
     globals: {
       ...globals.es2024,
-      ...globals.node,
-      document: 'readonly',
-      navigator: 'readonly',
-      window: 'readonly',
+      // ...globals.node,
     },
     parserOptions: {
-      // ecmaVersion: 2024, // default: latest
       ecmaFeatures: {
         impliedStrict: true,
         globalReturn: false,
-        jsx: false,
       },
     },
   },

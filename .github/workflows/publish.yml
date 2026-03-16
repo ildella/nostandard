@@ -32,13 +32,13 @@ jobs:
           corepack yarn --version
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install
 
       - name: Run lint
         run: yarn lint
 
       - name: Run tests
-        run: yarn vitest run
+        run: yarn test.ci
 
       - name: Publish to npm
         run: npm publish --provenance --access public

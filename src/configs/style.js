@@ -1,9 +1,9 @@
-const stylisticJs = require('@stylistic/eslint-plugin-js')
+import stylisticJs from '@stylistic/eslint-plugin-js'
 
 const LINEBREAK_TYPE = 'never'
 const STATEMENT_TYPE = 'default'
 
-module.exports = {
+export const style = {
   name: 'nostandard/style',
 
   plugins: {'@stylistic/js': stylisticJs},
