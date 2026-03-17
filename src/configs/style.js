@@ -41,7 +41,7 @@ export const style = {
     '@stylistic/js/max-len': [
       'warn',
       {
-        code: 90,
+        code: 80,
         tabWidth: 2,
         ignoreComments: false,
         ignoreTrailingComments: false,
