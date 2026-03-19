@@ -30,6 +30,12 @@ export const style = {
         imports: 'always-multiline',
         exports: 'always-multiline',
         functions: 'only-multiline',
+        importAttributes: 'never',
+        dynamicImports: 'never',
+        // style v6 beta
+        // "enums": "never",
+        // "generics": "never",
+        // "tuples": "never"
       }],
     '@stylistic/js/eol-last': ['warn', 'always'],
     '@stylistic/js/function-paren-newline': ['warn', 'consistent'],
