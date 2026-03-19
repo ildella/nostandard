@@ -112,12 +112,14 @@ export const style = {
         next: STATEMENT_TYPE,
       },
     ],
-    '@stylistic/js/padded-blocks': ['warn',
+    '@stylistic/js/padded-blocks': [
+      'warn',
       {
         blocks: 'never',
         switches: 'never',
         classes: 'never',
-      }],
+      },
+    ],
     // quotes: consider { avoidEscape: true, allowTemplateLiterals: false }
     '@stylistic/js/quotes': ['warn', 'single'],
     '@stylistic/js/quote-props': ['warn', 'consistent-as-needed'],
@@ -144,7 +146,10 @@ export const style = {
       {enforceForClassMembers: true}],
     '@stylistic/js/dot-location': ['warn', 'property'],
     '@stylistic/js/func-call-spacing': ['warn', 'never'],
-    '@stylistic/js/generator-star-spacing': ['warn', {before: true, after: true}],
+    '@stylistic/js/generator-star-spacing': [
+      'warn',
+      {before: true, after: true},
+    ],
     '@stylistic/js/keyword-spacing': ['warn', {before: true, after: true}],
     '@stylistic/js/lines-between-class-members': ['warn',
       'always',

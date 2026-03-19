@@ -71,10 +71,14 @@ export const base = {
     'prefer-object-spread': 'off',
     'prefer-rest-params': 'warn',
     'prefer-spread': 'warn',
+    'prefer-template': 'warn',
     'require-await': 'warn',
 
     'dot-notation': ['warn', {allowKeywords: true}],
-    'accessor-pairs': ['warn', {setWithoutGet: true, enforceForClassMembers: true}],
+    'accessor-pairs': [
+      'warn',
+      {setWithoutGet: true, enforceForClassMembers: true},
+    ],
     'array-callback-return': ['warn',
       {
         allowImplicit: false,
