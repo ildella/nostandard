@@ -1,6 +1,6 @@
 {
   "name": "eslint-nostandard",
-  "version": "0.5.1",
+  "version": "0.5.2-0",
   "description": "Eslint standard for bad people.",
   "license": "MIT",
   "type": "module",
