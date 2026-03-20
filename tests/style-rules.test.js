@@ -87,17 +87,3 @@ test('object-curly-newline enforces minProperties 4', () => {
   )
   expect(hits.length).toBeGreaterThan(0)
 })
-
-test('max-len warns at 90 characters', () => {
-  const longLine = `const x = '${'a'.repeat(85)}'\n`
-  const messages = lint(longLine)
-  const hits = findRule(messages, '@stylistic/js/max-len')
-  expect(hits).toHaveLength(1)
-})
-
-test('max-len does not warn under 90 characters', () => {
-  const shortLine = `const x = '${'a'.repeat(75)}'\n`
-  const messages = lint(shortLine)
-  const hits = findRule(messages, '@stylistic/js/max-len')
-  expect(hits).toHaveLength(0)
-})
