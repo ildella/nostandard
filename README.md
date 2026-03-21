@@ -2,21 +2,22 @@
 
 A consolidation of my old [eslint configurations](https://github.com/ildella/eslint-config-node-moar) ported to ESLint 9+ and Flat configuration.
 
-The overall project structure has been taken from [NeoStandard](https://github.com/neostandard/neostandard) from which I also borrowed some additional `base` and `style` rules that despite were not in my original ruleset, were not causing any issue with my current projects. They have all been converted to the Golden Rule.
+## What's in here?
+
+- **base** — core ESLint rules for correctness and best practices
+- **style** — opinionated formatting via [Stylistic](https://eslint.style/)
+- **svelte** — Svelte rules via `eslint-plugin-svelte` (optional, subpath import)
+- **vitest** — Vitest rules via `@vitest/eslint-plugin` (optional, subpath import)
 
 ## Usage
 
 ```shell
 yarn add -D eslint-nostandard
-
-# Or
 pnpm add -D eslint-nostandard
-
-# Or, if you are an horrible person:
 npm install -D eslint-nostandard
 ```
 
-Basic usage in `eslint.config.js`:
+Basic usage for `eslint.config.js`:
 
 ```js
 import {nostandard} from 'eslint-nostandard'
@@ -80,10 +81,3 @@ If it breaks, it's an error.
 If it does not break, it's a warning.
 
 With one and only one special exception, as all good rules must have an exception.
-
-## What's in here?
-
-- **base** — core ESLint rules for correctness and best practices
-- **style** — opinionated formatting via [Stylistic](https://eslint.style/)
-- **svelte** — Svelte rules via `eslint-plugin-svelte` (optional, subpath import)
-- **vitest** — Vitest rules via `@vitest/eslint-plugin` (optional, subpath import)
