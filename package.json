@@ -24,7 +24,11 @@
   "exports": {
     ".": "./src/index.js",
     "./svelte": "./src/configs/svelte.js",
-    "./vitest": "./src/configs/vitest.js"
+    "./vitest": "./src/configs/vitest.js",
+    "./import-x": "./src/configs/import-x.js",
+    "./sonarjs": "./src/configs/sonarjs.js",
+    "./functional-unicorn": "./src/configs/functional-unicorn.js",
+    "./playwright": "./src/configs/playwright.js"
   },
   "files": [
     "src"
@@ -40,15 +44,44 @@
   },
   "dependencies": {
     "@eslint/js": "^9",
-    "@stylistic/eslint-plugin-js": "^3",
-    "globals": "^15"
+    "@stylistic/eslint-plugin-js": "^4",
+    "globals": "^16"
   },
   "devDependencies": {
     "@vitest/eslint-plugin": "1.6.17",
     "eslint": "^9",
+    "eslint-plugin-functional": "10.0.0",
+    "eslint-plugin-import-x": "4.16.2",
+    "eslint-plugin-playwright": "2.10.4",
+    "eslint-plugin-sonarjs": "4.0.3",
     "eslint-plugin-svelte": "3.17.1",
+    "eslint-plugin-unicorn": "60.0.0",
     "svelte": "5.55.5",
     "vitest": "4.1.6"
+  },
+  "peerDependencies": {
+    "eslint-plugin-functional": "^10.0.0",
+    "eslint-plugin-import-x": "^4.16.0",
+    "eslint-plugin-playwright": "^2.10.0",
+    "eslint-plugin-sonarjs": "^4.0.0",
+    "eslint-plugin-unicorn": "^60.0.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-functional": {
+      "optional": true
+    },
+    "eslint-plugin-import-x": {
+      "optional": true
+    },
+    "eslint-plugin-playwright": {
+      "optional": true
+    },
+    "eslint-plugin-sonarjs": {
+      "optional": true
+    },
+    "eslint-plugin-unicorn": {
+      "optional": true
+    }
   },
   "stableVersion": "0.6.0"
 }
