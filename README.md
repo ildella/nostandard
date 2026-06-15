@@ -8,6 +8,10 @@ A consolidation of my old [eslint configurations](https://github.com/ildella/esl
 - **style** — opinionated formatting via [Stylistic](https://eslint.style/)
 - **svelte** — Svelte rules via `eslint-plugin-svelte` (optional, subpath import)
 - **vitest** — Vitest rules via `@vitest/eslint-plugin` (optional, subpath import)
+- **import-x** — curated import-x rules for `src/` and `tests/` (optional, subpath import)
+- **sonarjs** — SonarJS recommended rules with curated overrides (optional, subpath import)
+- **functional-unicorn** — functional + unicorn recommended rules with curated overrides (optional, subpath import)
+- **playwright** — Playwright recommended rules for `e2e/` files (optional, subpath import)
 
 ## Usage
 
@@ -64,6 +68,78 @@ import vitest from 'eslint-nostandard/vitest'
 export default [
   ...nostandard.recommended,
   vitest,
+]
+```
+
+### import-x
+
+Install the optional peer dependency, then import from the subpath:
+
+```shell
+yarn add -D eslint-plugin-import-x
+```
+
+```js
+import {nostandard} from 'eslint-nostandard'
+import importX from 'eslint-nostandard/import-x'
+
+export default [
+  ...nostandard.recommended,
+  importX,
+]
+```
+
+### sonarjs
+
+Install the optional peer dependency, then import from the subpath:
+
+```shell
+yarn add -D eslint-plugin-sonarjs
+```
+
+```js
+import {nostandard} from 'eslint-nostandard'
+import sonarjs from 'eslint-nostandard/sonarjs'
+
+export default [
+  ...nostandard.recommended,
+  sonarjs,
+]
+```
+
+### functional-unicorn
+
+Install the optional peer dependencies, then import from the subpath:
+
+```shell
+yarn add -D eslint-plugin-functional eslint-plugin-unicorn
+```
+
+```js
+import {nostandard} from 'eslint-nostandard'
+import functionalUnicorn from 'eslint-nostandard/functional-unicorn'
+
+export default [
+  ...nostandard.recommended,
+  ...functionalUnicorn,
+]
+```
+
+### playwright
+
+Install the optional peer dependency, then import from the subpath:
+
+```shell
+yarn add -D eslint-plugin-playwright
+```
+
+```js
+import {nostandard} from 'eslint-nostandard'
+import playwright from 'eslint-nostandard/playwright'
+
+export default [
+  ...nostandard.recommended,
+  playwright,
 ]
 ```
 

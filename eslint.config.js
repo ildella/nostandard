@@ -11,4 +11,10 @@ export default [
       },
     },
   },
+  {
+    files: ['src/configs/*.js'],
+    rules: {
+      'max-lines': 'off',
+    },
+  },
 ]
