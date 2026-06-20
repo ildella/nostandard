@@ -62,8 +62,8 @@ export default [
         }],
       'no-return-assign': 'off',
       'prefer-const': 'off',
-      '@stylistic/js/indent': 'off',
-      '@stylistic/js/max-len': 'error',
+      '@stylistic/indent': 'off',
+      '@stylistic/max-len': 'error',
     },
   },
 ]
