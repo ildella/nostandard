@@ -27,9 +27,9 @@ test('base config includes eslint recommended rules', () => {
   expect(base.rules['no-undef']).toBe('error')
 })
 
-test('style config has @stylistic/js plugin', () => {
+test('style config has @stylistic plugin', () => {
   const {style} = nostandard
-  expect(style.plugins['@stylistic/js']).toBeDefined()
+  expect(style.plugins['@stylistic']).toBeDefined()
 })
 
 test('base: no-undefined is error', () => {
@@ -53,21 +53,21 @@ test('base: no-inner-declarations is warn', () => {
 test('style: implicit-arrow-linebreak is off', () => {
   const {style} = nostandard
   expect(
-    style.rules['@stylistic/js/implicit-arrow-linebreak'],
+    style.rules['@stylistic/implicit-arrow-linebreak'],
   ).toBe('off')
 })
 
 test('style: no-confusing-arrow is off', () => {
   const {style} = nostandard
   expect(
-    style.rules['@stylistic/js/no-confusing-arrow'],
+    style.rules['@stylistic/no-confusing-arrow'],
   ).toBe('off')
 })
 
 test('style: function-paren-newline is consistent', () => {
   const {style} = nostandard
   expect(
-    style.rules['@stylistic/js/function-paren-newline'],
+    style.rules['@stylistic/function-paren-newline'],
   ).toEqual(['warn',
     'consistent'])
 })
@@ -75,7 +75,7 @@ test('style: function-paren-newline is consistent', () => {
 test('style: nonblock-statement-body-position is warn below', () => {
   const {style} = nostandard
   expect(
-    style.rules['@stylistic/js/nonblock-statement-body-position'],
+    style.rules['@stylistic/nonblock-statement-body-position'],
   ).toEqual(['warn',
     'below'])
 })
@@ -83,7 +83,7 @@ test('style: nonblock-statement-body-position is warn below', () => {
 test('style: no-extra-parens is warn with nestedBinaryExpressions off', () => {
   const {style} = nostandard
   expect(
-    style.rules['@stylistic/js/no-extra-parens'],
+    style.rules['@stylistic/no-extra-parens'],
   ).toEqual(['warn',
     'all',
     {nestedBinaryExpressions: false}])
@@ -91,6 +91,6 @@ test('style: no-extra-parens is warn with nestedBinaryExpressions off', () => {
 
 test('style: max-len defaults to 90', () => {
   const {style} = nostandard
-  const maxLen = style.rules['@stylistic/js/max-len']
+  const maxLen = style.rules['@stylistic/max-len']
   expect(maxLen[1].code).toBeLessThan(90)
 })

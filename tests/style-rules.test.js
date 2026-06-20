@@ -12,7 +12,7 @@ test('implicit-arrow-linebreak is off (no warnings)', () => {
   const code = 'const fn = () =>\n  1\nfn()\n'
   const messages = lint(code)
   const hits = findRule(
-    messages, '@stylistic/js/implicit-arrow-linebreak',
+    messages, '@stylistic/implicit-arrow-linebreak',
   )
   expect(hits).toHaveLength(0)
 })
@@ -21,7 +21,7 @@ test('no-confusing-arrow is off (no warnings)', () => {
   const code = 'const fn = a => a ? 1 : 0\nfn(1)\n'
   const messages = lint(code)
   const hits = findRule(
-    messages, '@stylistic/js/no-confusing-arrow',
+    messages, '@stylistic/no-confusing-arrow',
   )
   expect(hits).toHaveLength(0)
 })
@@ -30,7 +30,7 @@ test('no-extra-parens warns on unnecessary parens', () => {
   const code = 'const x = (1 + 2)\n'
   const messages = lint(code)
   const hits = findRule(
-    messages, '@stylistic/js/no-extra-parens',
+    messages, '@stylistic/no-extra-parens',
   )
   expect(hits).toHaveLength(1)
 })
@@ -39,7 +39,7 @@ test('no-extra-parens allows nested binary expressions', () => {
   const code = 'const x = (1 + 2) * 3\n'
   const messages = lint(code)
   const hits = findRule(
-    messages, '@stylistic/js/no-extra-parens',
+    messages, '@stylistic/no-extra-parens',
   )
   expect(hits).toHaveLength(0)
 })
@@ -48,7 +48,7 @@ test('function-paren-newline warns on inconsistent parens', () => {
   const code = 'const fn = (a, b\n) => a + b\nfn(1, 2)\n'
   const messages = lint(code)
   const hits = findRule(
-    messages, '@stylistic/js/function-paren-newline',
+    messages, '@stylistic/function-paren-newline',
   )
   expect(hits).toHaveLength(1)
 })
@@ -58,7 +58,7 @@ test('nonblock-statement-body-position warns on beside', () => {
   const messages = lint(code)
   const hits = findRule(
     messages,
-    '@stylistic/js/nonblock-statement-body-position',
+    '@stylistic/nonblock-statement-body-position',
   )
   expect(hits).toHaveLength(1)
   expect(hits[0].severity).toBe(1)
@@ -74,7 +74,7 @@ test('multiline-ternary allows always-multiline', () => {
   ].join('\n')
   const messages = lint(code)
   const hits = findRule(
-    messages, '@stylistic/js/multiline-ternary',
+    messages, '@stylistic/multiline-ternary',
   )
   expect(hits).toHaveLength(0)
 })
@@ -83,7 +83,7 @@ test('object-curly-newline enforces minProperties 4', () => {
   const code = 'const obj = { a: 1, b: 2, c: 3, d: 4 }\n'
   const messages = lint(code)
   const hits = findRule(
-    messages, '@stylistic/js/object-curly-newline',
+    messages, '@stylistic/object-curly-newline',
   )
   expect(hits.length).toBeGreaterThan(0)
 })
