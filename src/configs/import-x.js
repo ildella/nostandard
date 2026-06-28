@@ -19,7 +19,7 @@ export default {
     'import-x/no-unresolved': 'off',
     'import-x/no-dynamic-require': 'warn',
     'import-x/order': 'warn',
-    'import-x/max-dependencies': ['warn', {max: 28}],
+    'import-x/max-dependencies': ['warn', {max: 10}],
     'import-x/no-mutable-exports': 'error',
     'import-x/no-self-import': 'error',
     'import-x/no-duplicates': 'error',
@@ -27,5 +27,6 @@ export default {
     'import-x/no-namespace': 'off',
     'import-x/no-named-as-default': 'off',
     'import-x/no-named-as-default-member': 'error',
+    // 'import-x/no-nodejs-modules': 'error',
   },
 }

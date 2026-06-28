@@ -1,6 +1,6 @@
 {
   "name": "eslint-nostandard",
-  "version": "0.8.1",
+  "version": "0.9.0",
   "description": "Eslint standard for bad people.",
   "license": "MIT",
   "type": "module",
@@ -27,7 +27,8 @@
     "./vitest": "./src/configs/vitest.js",
     "./import-x": "./src/configs/import-x.js",
     "./sonarjs": "./src/configs/sonarjs.js",
-    "./functional-unicorn": "./src/configs/functional-unicorn.js",
+    "./functional": "./src/configs/functional.js",
+    "./unicorn": "./src/configs/unicorn.js",
     "./playwright": "./src/configs/playwright.js"
   },
   "files": [

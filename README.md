@@ -10,7 +10,8 @@ A consolidation of my old [eslint configurations](https://github.com/ildella/esl
 - **vitest** — Vitest rules via `@vitest/eslint-plugin` (optional, subpath import)
 - **import-x** — curated import-x rules for `src/` and `tests/` (optional, subpath import)
 - **sonarjs** — SonarJS recommended rules with curated overrides (optional, subpath import)
-- **functional-unicorn** — functional + unicorn recommended rules with curated overrides (optional, subpath import)
+- **functional** — functional recommended rules with curated overrides (optional, subpath import)
+- **unicorn** — unicorn recommended rules with curated overrides (optional, subpath import)
 - **playwright** — Playwright recommended rules for `e2e/` files (optional, subpath import)
 
 ## Usage
@@ -107,21 +108,21 @@ export default [
 ]
 ```
 
-### functional-unicorn
+### functional
 
 Install the optional peer dependencies, then import from the subpath:
 
 ```shell
-yarn add -D eslint-plugin-functional eslint-plugin-unicorn
+yarn add -D eslint-plugin-functional
 ```
 
 ```js
 import {nostandard} from 'eslint-nostandard'
-import functionalUnicorn from 'eslint-nostandard/functional-unicorn'
+import functional from 'eslint-nostandard/functional'
 
 export default [
   ...nostandard.recommended,
-  ...functionalUnicorn,
+  ...functional,
 ]
 ```
 
