@@ -112,7 +112,7 @@ export const base = {
     'no-dupe-keys': 'warn',
     'no-duplicate-case': 'warn',
     'no-useless-backreference': 'warn',
-    'no-empty': ['warn', {allowEmptyCatch: true}],
+    'no-empty': ['warn', {allowEmptyCatch: false}],
     'no-empty-character-class': 'warn',
     'no-empty-pattern': 'warn',
     'no-eval': 'warn',
