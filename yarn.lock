@@ -949,9 +949,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/eslint-plugin@npm:1.6.26":
-  version: 1.6.26
-  resolution: "@vitest/eslint-plugin@npm:1.6.26"
+"@vitest/eslint-plugin@npm:1.6.27":
+  version: 1.6.27
+  resolution: "@vitest/eslint-plugin@npm:1.6.27"
   dependencies:
     "@typescript-eslint/scope-manager": "npm:^8.58.0"
     "@typescript-eslint/utils": "npm:^8.58.0"
@@ -967,7 +967,7 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: 10c0/e1dd39f6ae26f7e53261f95ee5ec1cf6b9a8b9eabf0b908d3cf589bff30f86051ab6b86364dc3fdb11fce3684e90255173988a56091f778c4f77e3d75afbd62e
+  checksum: 10c0/2523b1f3af37164127a745634da20616494538a234426956c72d9fbf6062dcc5b3040cc5283bcf5a4bcfa1f993f9746d9d467c5f3bb5c879cddbdaabb3060cac
   languageName: node
   linkType: hard
 
@@ -1491,16 +1491,16 @@ __metadata:
   dependencies:
     "@eslint/js": "npm:^9"
     "@stylistic/eslint-plugin": "npm:^4"
-    "@vitest/eslint-plugin": "npm:1.6.26"
+    "@vitest/eslint-plugin": "npm:1.6.27"
     eslint: "npm:^9"
     eslint-plugin-functional: "npm:10.0.0"
     eslint-plugin-import-x: "npm:4.17.1"
     eslint-plugin-playwright: "npm:2.11.0"
     eslint-plugin-sonarjs: "npm:4.2.0"
-    eslint-plugin-svelte: "npm:3.22.0"
+    eslint-plugin-svelte: "npm:3.23.0"
     eslint-plugin-unicorn: "npm:65.0.1"
     globals: "npm:^16"
-    svelte: "npm:5.56.8"
+    svelte: "npm:5.56.9"
     vitest: "npm:4.1.10"
   peerDependencies:
     eslint-plugin-functional: ^10.0.0
@@ -1602,9 +1602,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-svelte@npm:3.22.0":
-  version: 3.22.0
-  resolution: "eslint-plugin-svelte@npm:3.22.0"
+"eslint-plugin-svelte@npm:3.23.0":
+  version: 3.23.0
+  resolution: "eslint-plugin-svelte@npm:3.23.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.6.1"
     "@jridgewell/sourcemap-codec": "npm:^1.5.0"
@@ -1622,7 +1622,7 @@ __metadata:
   peerDependenciesMeta:
     svelte:
       optional: true
-  checksum: 10c0/ddc19d604d88f5794b9895c0668d068d9240938de8b2d1b54fd65e91ab1116bfdb391c401446b6dfd1cd49a7a365e8f7c3d4a98201382f8eb654af54594f61cd
+  checksum: 10c0/ad88b6833ab6cc469a7e3a062413811aab85e974510a64dd238ab0f18cfd527173be11f3f5c832dc94bbfe6351fda8d301dbc0e6f49282819cb4a83ec71ac170
   languageName: node
   linkType: hard
 
@@ -3082,9 +3082,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte@npm:5.56.8":
-  version: 5.56.8
-  resolution: "svelte@npm:5.56.8"
+"svelte@npm:5.56.9":
+  version: 5.56.9
+  resolution: "svelte@npm:5.56.9"
   dependencies:
     "@jridgewell/remapping": "npm:^2.3.4"
     "@jridgewell/sourcemap-codec": "npm:^1.5.0"
@@ -3102,7 +3102,7 @@ __metadata:
     locate-character: "npm:^3.0.0"
     magic-string: "npm:^0.30.11"
     zimmerframe: "npm:^1.1.2"
-  checksum: 10c0/1aec87508116e548b7502ee9f65bac9126a3769fb981bc51e497c76cb8ef6ec83472778ac27127dd73fcf6adbb4ac8fa3e28290163e6f72e2860491c24f018c8
+  checksum: 10c0/0c48b69aae9cb1954394a94854bba8b315c2156bca62b2540dcb0e6492972cc8a47d0c2f78fe272822dbee616472ede097edff8311a8f643353144de7ca1cd21
   languageName: node
   linkType: hard
 
