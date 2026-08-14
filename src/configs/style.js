@@ -145,7 +145,7 @@ export const style = {
       'never',
       {enforceForClassMembers: true}],
     '@stylistic/dot-location': ['warn', 'property'],
-    '@stylistic/func-call-spacing': ['warn', 'never'],
+    '@stylistic/function-call-spacing': ['warn', 'never'],
     '@stylistic/generator-star-spacing': [
       'warn',
       {before: true, after: true},
