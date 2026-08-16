@@ -1412,7 +1412,7 @@ __metadata:
     eslint-plugin-import-x: ^4.16.0
     eslint-plugin-playwright: ^2.10.0
     eslint-plugin-sonarjs: ^4.0.0
-    eslint-plugin-unicorn: ^60.0.0
+    eslint-plugin-unicorn: ">=60.0.0"
     globals: ^16.0.0  || ^17.0.0
   peerDependenciesMeta:
     eslint-plugin-functional:
