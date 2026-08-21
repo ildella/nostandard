@@ -1,20 +1,45 @@
 # Globals
 
-```
-  'amd',                 'applescript', 'atomtest',
-  'browser',             'builtin',     'chai',
-  'commonjs',            'couch',       'devtools',
-  'embertest',           'es2015',      'es2016',
-  'es2017',              'es2018',      'es2019',
-  'es2020',              'es2021',      'es2022',
-  'es2023',              'es2024',      'es2025',
-  'es3',                 'es5',         'greasemonkey',
-  'jasmine',             'jest',        'jquery',
-  'meteor',              'mocha',       'mongo',
-  'nashorn',             'node',        'nodeBuiltin',
-  'phantomjs',           'prototypejs', 'protractor',
-  'qunit',               'rhino',       'serviceworker',
-  'shared-node-browser', 'shelljs',     'webextensions',
-  'worker',              'wsh',         'yui'
+The `base` config enables the ES2024 built-ins only (`globals.es2024`). It deliberately does not assume where your code runs: no `node`, no `browser`, no test runner globals.
+
+To add more, extend `languageOptions.globals` in a later entry of your `eslint.config.js`. Presets come from the [`globals`](https://www.npmjs.com/package/globals) package (a required peer dependency of NoStandard):
+
+```js
+import {nostandard} from 'eslint-nostandard'
+import globals from 'globals'
+
+export default [
+  ...nostandard.recommended,
+  {
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+    },
+  },
 ]
 ```
+
+Combine as needed — for example browser code with Node build scripts:
+
+```js
+{
+  languageOptions: {
+    globals: {
+      ...globals.browser,
+      ...globals.node,
+    },
+  },
+}
+```
+
+## Available presets
+
+Some of the most common presets (see the `globals` package documentation for the full and current list):
+
+- **Environments:** `browser`, `node`, `shared-node-browser`, `worker`, `serviceworker`, `webextensions`
+- **Built-ins by language version:** `es3`, `es5`, `es2015` through `es2025`, `builtin`, `nodeBuiltin`
+- **Test runners:** `vitest` is covered by the optional [vitest config](../README.md#vitest); also available: `jest`, `mocha`, `jasmine`, `chai`, `qunit`
+- **Legacy / other:** `amd`, `commonjs`, `jquery`, `mongo`, `shelljs`, `phantomjs`, and more
+
+Note: preset names are case-sensitive (`es2015`, not `es2015+`; `nodeBuiltin`, not `nodebuiltin`).

@@ -1,4 +1,8 @@
-import {nostandard} from '../src/index.js'
+import defaultExport, {nostandard} from '../src/index.js'
+
+test('default export is nostandard.recommended', () => {
+  expect(defaultExport).toBe(nostandard.recommended)
+})
 
 test('configs.base exists', () => {
   expect(nostandard.base).toBeDefined()

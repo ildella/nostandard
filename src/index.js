@@ -6,3 +6,5 @@ export const nostandard = {
   style,
   recommended: [base, style],
 }
+
+export default nostandard.recommended
