@@ -64,3 +64,33 @@ test('camelcase warns on snake_case', () => {
   expect(hits.length).toBeGreaterThan(0)
   expect(hits[0].severity).toBe(1)
 })
+
+test('max-depth warns when blocks nest 3 deep', () => {
+  const code = [
+    'if (true) {',
+    '  if (true) {',
+    '    if (true) {',
+    '      const x = 1',
+    '      x',
+    '    }',
+    '  }',
+    '}',
+    '',
+  ].join('\n')
+  const messages = lint(code)
+  const hits = findRule(messages, 'max-depth')
+  expect(hits).toHaveLength(1)
+  expect(hits[0].severity).toBe(1)
+})
+
+test('max-params warns on a four-parameter function', () => {
+  const code = [
+    'const fn = (a, b, c, d) => a + b + c + d',
+    'fn(1, 2, 3, 4)',
+    '',
+  ].join('\n')
+  const messages = lint(code)
+  const hits = findRule(messages, 'max-params')
+  expect(hits).toHaveLength(1)
+  expect(hits[0].severity).toBe(1)
+})

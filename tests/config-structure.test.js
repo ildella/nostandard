@@ -54,6 +54,16 @@ test('base: no-inner-declarations is warn', () => {
   expect(base.rules['no-inner-declarations']).toBe('warn')
 })
 
+test('base: max-depth is warn at 2', () => {
+  const {base} = nostandard
+  expect(base.rules['max-depth']).toEqual(['warn', {max: 2}])
+})
+
+test('base: max-params is warn at 3', () => {
+  const {base} = nostandard
+  expect(base.rules['max-params']).toEqual(['warn', {max: 3}])
+})
+
 test('style: implicit-arrow-linebreak is off', () => {
   const {style} = nostandard
   expect(

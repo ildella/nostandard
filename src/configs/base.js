@@ -29,6 +29,8 @@ export const base = {
     'max-lines-per-function': ['warn', 40],
     'max-statements': ['warn', 15],
     'max-nested-callbacks': ['warn', 3],
+    'max-depth': ['warn', {max: 2}],
+    'max-params': ['warn', {max: 3}],
     'no-console': 'off',
     'no-await-in-loop': 'warn',
     'no-empty-function': 'warn',
