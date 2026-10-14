@@ -12,7 +12,7 @@ const rules = {
   'unicorn/prefer-node-protocol': 'warn',
   'unicorn/prefer-single-call': 'off',
   'unicorn/prefer-spread': 'warn',
-  'unicorn/prevent-abbreviations': 'warn',
+  'unicorn/name-replacements': 'warn',
   'unicorn/prefer-query-selector': 'off',
   'unicorn/no-array-callback-reference': 'off',
   'unicorn/prefer-export-from': 'warn',
