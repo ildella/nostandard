@@ -31,7 +31,8 @@
     "./sonarjs": "./src/configs/sonarjs.js",
     "./functional": "./src/configs/functional.js",
     "./unicorn": "./src/configs/unicorn.js",
-    "./playwright": "./src/configs/playwright.js"
+    "./playwright": "./src/configs/playwright.js",
+    "./plugin": "./src/rules/index.js"
   },
   "files": [
     "src"

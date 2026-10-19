@@ -43,3 +43,7 @@ Some of the most common presets (see the `globals` package documentation for the
 - **Legacy / other:** `amd`, `commonjs`, `jquery`, `mongo`, `shelljs`, `phantomjs`, and more
 
 Note: preset names are case-sensitive (`es2015`, not `es2015+`; `nodeBuiltin`, not `nodebuiltin`).
+
+## Custom rules
+
+The custom rule shipped by NoStandard, `nostandard/max-destructured-properties`, is part of the `base` config and is unrelated to globals. It counts the properties destructured in a function parameter and warns above `max` (default `3`); see [custom-rules.md](custom-rules.md).

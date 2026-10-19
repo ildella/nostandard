@@ -1,8 +1,11 @@
 import js from '@eslint/js'
 import globals from 'globals'
+import {plugin} from '../rules/index.js'
 
 export const base = {
   name: 'nostandard/base',
+
+  plugins: {nostandard: plugin},
 
   languageOptions: {
     sourceType: 'module',
@@ -31,6 +34,7 @@ export const base = {
     'max-nested-callbacks': ['warn', 3],
     'max-depth': ['warn', {max: 2}],
     'max-params': ['warn', {max: 3}],
+    'nostandard/max-destructured-properties': ['warn', {max: 3}],
     'no-console': 'off',
     'no-await-in-loop': 'warn',
     'no-empty-function': 'warn',
