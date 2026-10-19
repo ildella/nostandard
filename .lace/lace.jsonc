@@ -1,0 +1,17 @@
+{
+  "issues": {
+    "provider": "linear",
+    "linear": {
+      "team": "OSP",
+      "project": "NoStandard"
+    }
+  },
+  "models": {
+    "default": "opencode/deepseek-v4.1-flash-free",
+    "agents": {
+      "plan": ["opencode/glm-5.3-flash-free#high", "opencode-go/glm-5.3-flash#high"],
+      "build": ["opencode/deepseek-v4.1-flash-free#low", "opencode-go/deepseek-v4.1-flash#low"],
+      "lace/reviewer": ["xai/grok-4.7#low", "opencode-go/grok-4.7#low"],
+    }
+  },
+}
