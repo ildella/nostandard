@@ -37,6 +37,7 @@ export const base = {
     'nostandard/max-destructured-properties': ['warn', {max: 3}],
     'no-console': 'off',
     'no-await-in-loop': 'warn',
+    'nostandard/no-dynamic-import': 'warn',
     'no-empty-function': 'warn',
     'no-implicit-globals': 'warn',
     'no-inner-declarations': 'warn',

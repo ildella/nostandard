@@ -46,4 +46,4 @@ Note: preset names are case-sensitive (`es2015`, not `es2015+`; `nodeBuiltin`, n
 
 ## Custom rules
 
-The custom rule shipped by NoStandard, `nostandard/max-destructured-properties`, is part of the `base` config and is unrelated to globals. It counts the properties destructured in a function parameter and warns above `max` (default `3`); see [custom-rules.md](custom-rules.md).
+The custom rules shipped by NoStandard, `nostandard/max-destructured-properties` and `nostandard/no-dynamic-import`, are part of the `base` config and are unrelated to globals. The first counts the properties destructured in a function parameter and warns above `max` (default `3`); the second bans dynamic `import()`. See [custom-rules.md](custom-rules.md).

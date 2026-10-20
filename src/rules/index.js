@@ -1,4 +1,5 @@
 import {maxDestructuredProperties} from './max-destructured-properties.js'
+import {noDynamicImport} from './no-dynamic-import.js'
 
 export const plugin = {
   meta: {
@@ -7,5 +8,6 @@ export const plugin = {
 
   rules: {
     'max-destructured-properties': maxDestructuredProperties,
+    'no-dynamic-import': noDynamicImport,
   },
 }
