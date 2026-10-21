@@ -12,8 +12,8 @@ A consolidation of my old [eslint configurations](https://github.com/ildella/esl
 ## What's in here?
 
 - **base** — core ESLint rules for correctness and best practices, plus the
-  custom `nostandard/max-destructured-properties` and
-  `nostandard/no-dynamic-import` rules (see
+  custom `nostandard/max-destructured-properties`,
+  `nostandard/no-dynamic-import` and `nostandard/restricted-syntax` rules (see
   [docs/custom-rules.md](docs/custom-rules.md))
 - **style** — opinionated formatting via [Stylistic](https://eslint.style/)
 - **svelte** — Svelte rules via `eslint-plugin-svelte` (optional, subpath import)
@@ -254,4 +254,4 @@ Finally, they do not respect my Golden Rule.
 ## Design notes
 
 - **Everything is a peer dependency, most of it optional.** The official guidance for shareable configs is to bundle wrapped plugins as hard `dependencies`; here every plugin is declared as an *optional* peer instead. Your project declares what it lints with and nothing lands in your `node_modules` unless you asked for it. Consequence: you install the packages yourself, as shown above.
-- **What is this thing, a plugin or a config?** Per the ESLint docs taxonomy it is mostly a *shareable config*: the exports are configuration objects, built on other plugins. The exception is the small `nostandard` plugin, shipped with the package, that hosts our own rules (currently `max-destructured-properties` and `no-dynamic-import`, see [docs/custom-rules.md](docs/custom-rules.md)). The name predates strict adherence to the `eslint-config-*` convention and stays — now you know.
+- **What is this thing, a plugin or a config?** Per the ESLint docs taxonomy it is mostly a *shareable config*: the exports are configuration objects, built on other plugins. The exception is the small `nostandard` plugin, shipped with the package, that hosts our own rules (currently `max-destructured-properties`, `no-dynamic-import` and `restricted-syntax`, see [docs/custom-rules.md](docs/custom-rules.md)). The name predates strict adherence to the `eslint-config-*` convention and stays — now you know.

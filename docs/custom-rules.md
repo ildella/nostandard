@@ -1,6 +1,6 @@
 # Custom rules
 
-NoStandard ships two custom rules from the `nostandard` plugin.
+NoStandard ships three custom rules from the `nostandard` plugin.
 
 ## `nostandard/max-destructured-properties`
 
@@ -75,6 +75,54 @@ or for the specific file — instead of banning it in one project with a
 - Static `import` statements are not affected.
 - A dynamic import hidden behind `eval`, `new Function` or a bundled API is
   out of scope: this is an AST rule, not a runtime policy.
+
+## `nostandard/restricted-syntax`
+
+A copy of the core `no-restricted-syntax` under our own ruleId, same options
+and same selector language (ESQuery). It exists for one reason: the core rule
+is a single global `ruleId`, so a project that configures its own
+`no-restricted-syntax` **replaces** the base one — flat config does not merge
+rules. With this rule the two can coexist: the project keeps
+`no-restricted-syntax` for its local bans, and ours stays on.
+
+Enabled in `base` as `'warn'` with the selectors below.
+
+| Selector | Why |
+| --- | --- |
+| `MethodDefinition[kind="get"]`, `MethodDefinition[kind="set"]` | no accessors on classes |
+| `Property[kind="get"]`, `Property[kind="set"]` | no accessors on object literals |
+| `CallExpression[callee.name='spyOn'][arguments.0.name='console']` | no spying on console |
+| `CallExpression[callee.property.name='spyOn'][arguments.0.name='console']` | same, for `jest.spyOn` / `vi.spyOn` |
+| `Promise.resolve(null)` | use an exception or a real value |
+
+Options are the core rule's, unchanged:
+
+```js
+{
+  rules: {
+    'nostandard/restricted-syntax': [
+      'error',
+      'WithStatement',
+      {selector: 'TryStatement', message: 'No try/catch blocks.'},
+    ],
+  },
+}
+```
+
+A string entry gets the core rule's generated message
+(`Using 'Selector' is not allowed.`).
+
+### Details
+
+- The default list lives in `src/configs/restricted-syntax.js`.
+- Severity is yours: `'off'` silences the whole list for a project, and a
+  project-level array replaces it.
+- It is still **one** ruleId for all entries: `eslint-disable-next-line
+  nostandard/restricted-syntax` silences the whole list on that line. Use the
+  named rules (`no-dynamic-import`, `no-accessors`) when you need per-ban
+  disables.
+- Accessors are a strong opinion. If your project has classes, ORM entities or
+  framework components with getters, override the rule or narrow the list.
 
 The plugin is also exported directly, for advanced config composition:
 

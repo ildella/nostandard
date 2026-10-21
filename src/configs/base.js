@@ -1,6 +1,7 @@
 import js from '@eslint/js'
 import globals from 'globals'
 import {plugin} from '../rules/index.js'
+import {restrictedSyntaxList} from './restricted-syntax.js'
 
 export const base = {
   name: 'nostandard/base',
@@ -35,6 +36,7 @@ export const base = {
     'max-depth': ['warn', {max: 2}],
     'max-params': ['warn', {max: 3}],
     'nostandard/max-destructured-properties': ['warn', {max: 3}],
+    'nostandard/restricted-syntax': ['warn', ...restrictedSyntaxList],
     'no-console': 'off',
     'no-await-in-loop': 'warn',
     'nostandard/no-dynamic-import': 'warn',
