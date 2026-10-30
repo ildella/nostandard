@@ -1,6 +1,6 @@
 # Custom rules
 
-NoStandard ships three custom rules from the `nostandard` plugin.
+NoStandard ships four custom rules from the `nostandard` plugin.
 
 ## `nostandard/max-destructured-properties`
 
@@ -39,6 +39,30 @@ body leaves the payload unchanged and simply hides the count.
 - `RestElement` (`...rest`) is not counted.
 - Only top-level keys of the parameter's `ObjectPattern` are counted.
 - Destructuring outside parameters (`const {a} = obj`) is not counted.
+
+## `nostandard/no-empty-sentinel`
+
+`null` and `''` are not a way to say "nothing happened". Absence is `[]`,
+or an exception. Enabled only in the functional config, as `'warn'`. It is
+not part of `recommended`.
+
+The literal is banned when it is the value of a return (including an arrow
+body and a ternary branch), an assignment or initializer, or an operand of
+`||` or `??`.
+
+```js
+// warn
+const missing = null
+const blank = ''
+const fallback = value || null
+const fn = () => null
+```
+
+Not banned: comparisons (`x === null`), call arguments (`fn(null)`),
+array elements (`[null]`), object properties, `' '`, `{}`, `undefined`.
+
+`undefined` stays on `no-undefined` in `base`. `unicorn/no-null` is a
+separate warn and is not this rule.
 
 ## `nostandard/no-dynamic-import`
 

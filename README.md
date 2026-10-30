@@ -20,7 +20,7 @@ A consolidation of my old [eslint configurations](https://github.com/ildella/esl
 - **vitest** — Vitest rules via `@vitest/eslint-plugin` (optional, subpath import)
 - **import-x** — curated import-x rules for `src/` and `tests/` (optional, subpath import)
 - **sonarjs** — SonarJS recommended rules with curated overrides (optional, subpath import)
-- **functional** — functional recommended rules with curated overrides (optional, subpath import)
+- **functional** — functional recommended rules with curated overrides, plus `nostandard/no-empty-sentinel` (optional, subpath import)
 - **unicorn** — unicorn recommended rules with curated overrides (optional, subpath import)
 - **playwright** — Playwright recommended rules for `e2e/` files (optional, subpath import)
 
@@ -167,6 +167,8 @@ export default [
   functional,
 ]
 ```
+
+On top of the functional preset this also warns on `null` and `''` used as a return, an assignment, or an operand of `||` / `??` (`nostandard/no-empty-sentinel`), and sets `no-param-reassign` to `['warn', {props: true}]`.
 
 ### unicorn
 
