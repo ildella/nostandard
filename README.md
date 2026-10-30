@@ -21,6 +21,7 @@ A consolidation of my old [eslint configurations](https://github.com/ildella/esl
 - **import-x** — curated import-x rules for `src/` and `tests/` (optional, subpath import)
 - **sonarjs** — SonarJS recommended rules with curated overrides (optional, subpath import)
 - **functional** — functional recommended rules with curated overrides, plus `nostandard/no-empty-sentinel` (optional, subpath import)
+- **functional-typed** — optional type-aware overlay over functional: `functional/immutable-data` at warn via the typescript-eslint parser (optional, subpath import)
 - **unicorn** — unicorn recommended rules with curated overrides (optional, subpath import)
 - **playwright** — Playwright recommended rules for `e2e/` files (optional, subpath import)
 
@@ -37,6 +38,7 @@ Every config needs the plugin(s) it wraps installed in your project. This table 
 | import-x | `eslint-nostandard/import-x` | `eslint-plugin-import-x` | object |
 | sonarjs | `eslint-nostandard/sonarjs` | `eslint-plugin-sonarjs` | object |
 | functional | `eslint-nostandard/functional` | `eslint-plugin-functional` | object |
+| functional-typed | `eslint-nostandard/functional-typed` | `typescript`, `typescript-eslint`, `eslint-plugin-functional` | object |
 | unicorn | `eslint-nostandard/unicorn` | `eslint-plugin-unicorn` | object |
 | playwright | `eslint-nostandard/playwright` | `eslint-plugin-playwright` | object |
 
@@ -169,6 +171,51 @@ export default [
 ```
 
 On top of the functional preset this also warns on `null` and `''` used as a return, an assignment, or an operand of `||` / `??` (`nostandard/no-empty-sentinel`), and sets `no-param-reassign` to `['warn', {props: true}]`.
+
+### functional-typed
+
+An optional type-aware overlay on top of `functional`. It enables exactly one
+type-aware rule, `functional/immutable-data` at warn, and nothing else.
+
+Install the optional peer dependencies, then import from the subpath:
+
+```shell
+yarn add -D typescript typescript-eslint
+```
+
+Composition order matters: recommended, then functional, then functional-typed.
+
+```js
+import {nostandard} from 'eslint-nostandard'
+import functional from 'eslint-nostandard/functional'
+import functionalTyped from 'eslint-nostandard/functional-typed'
+
+export default [
+  ...nostandard.recommended,
+  functional,
+  functionalTyped,
+]
+```
+
+The parser needs a `tsconfig.json` it can find. It is used for analysis only:
+no runtime and no emit, JavaScript files only.
+
+```json
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true
+  },
+  "include": ["**/*.js", "**/*.mjs", "**/*.cjs"]
+}
+```
+
+If `functionalTyped` comes before `functional`, the `disableTypeChecked` rules
+from `functional` turn `functional/immutable-data` back off.
+
+The rule flags a mutation only where the types say the value is readonly: it
+does not cover an untyped parameter, and it is not a ban on `push`.
 
 ### unicorn
 

@@ -679,6 +679,46 @@
         "version": "2.1.0"
       }
     },
+    "@typescript-eslint/eslint-plugin@npm:8.72.1": {
+      "checksum": "1b185c6d5e8860d44a343d467daed46d584d3cdb0175383109fcb5c388061913c85f8d2d7a17a5d59dbdfff204159c4c1120e7535f91d375d2049e9424e1927d",
+      "resolution": {
+        "resolution": "@typescript-eslint/eslint-plugin@npm:8.72.1",
+        "version": "8.72.1",
+        "dependencies": {
+          "@eslint-community/regexpp": "^4.12.2",
+          "@typescript-eslint/scope-manager": "8.72.1",
+          "@typescript-eslint/type-utils": "8.72.1",
+          "@typescript-eslint/utils": "8.72.1",
+          "@typescript-eslint/visitor-keys": "8.72.1",
+          "ignore": "^7.0.5",
+          "natural-compare": "^1.4.0",
+          "ts-api-utils": "^2.5.0"
+        },
+        "peerDependencies": {
+          "@typescript-eslint/parser": "^8.72.1",
+          "eslint": "^8.57.0 || ^9.0.0 || ^10.0.0",
+          "typescript": ">=4.8.4 <6.1.0"
+        }
+      }
+    },
+    "@typescript-eslint/parser@npm:8.72.1": {
+      "checksum": "4a32c636e0f95bd5111bf2e106f2f76de8dc89e87f854c611f2b15e15530ff3cdb73b3d89270f1619825b3772af1657ccbc6fbe2b3587f672a97f876e0c54f74",
+      "resolution": {
+        "resolution": "@typescript-eslint/parser@npm:8.72.1",
+        "version": "8.72.1",
+        "dependencies": {
+          "@typescript-eslint/scope-manager": "8.72.1",
+          "@typescript-eslint/types": "8.72.1",
+          "@typescript-eslint/typescript-estree": "8.72.1",
+          "@typescript-eslint/visitor-keys": "8.72.1",
+          "debug": "^4.4.3"
+        },
+        "peerDependencies": {
+          "eslint": "^8.57.0 || ^9.0.0 || ^10.0.0",
+          "typescript": ">=4.8.4 <6.1.0"
+        }
+      }
+    },
     "@typescript-eslint/project-service@npm:8.61.0": {
       "checksum": "d7c2da1750c238e308e48a9ed10e54ec0271e4183f503b078d891dde8e0be6426c43c2a9e17e46ebf0cae6c496ba6445debcd8cddec3e54c3278596340b3f9b3",
       "resolution": {
@@ -709,6 +749,21 @@
         }
       }
     },
+    "@typescript-eslint/project-service@npm:8.72.1": {
+      "checksum": "cef066de1e92491d02d7121499e85ed282c983e72145feeb92b5366ea5fea937641a7d7537a04135b9bcfdbee89edeaeca7c487fa561db31e967cf07daad1e72",
+      "resolution": {
+        "resolution": "@typescript-eslint/project-service@npm:8.72.1",
+        "version": "8.72.1",
+        "dependencies": {
+          "@typescript-eslint/tsconfig-utils": "^8.72.1",
+          "@typescript-eslint/types": "^8.72.1",
+          "debug": "^4.4.3"
+        },
+        "peerDependencies": {
+          "typescript": ">=4.8.4 <6.1.0"
+        }
+      }
+    },
     "@typescript-eslint/scope-manager@npm:8.61.0": {
       "checksum": "0a4fbbe58163cf8764880ffd83c81cfe3a738b17d988edbe3262cc2d80703b41f0e38df80fe752743f10f05cf21b3885d0db0475bd007a8de1667538d611d49a",
       "resolution": {
@@ -731,6 +786,17 @@
         }
       }
     },
+    "@typescript-eslint/scope-manager@npm:8.72.1": {
+      "checksum": "c9f3b8c24d658192c0e7b802d945957be66dbabcfdf1f7998d6b6f669a03ce601b6b4e65bf5f2ec9732f298efc6906a523960ab60f0653c84c93b94abda93491",
+      "resolution": {
+        "resolution": "@typescript-eslint/scope-manager@npm:8.72.1",
+        "version": "8.72.1",
+        "dependencies": {
+          "@typescript-eslint/types": "8.72.1",
+          "@typescript-eslint/visitor-keys": "8.72.1"
+        }
+      }
+    },
     "@typescript-eslint/tsconfig-utils@npm:8.61.0, @typescript-eslint/tsconfig-utils@npm:^8.61.0": {
       "checksum": "3fe21a3175c4d2c52a7b01bedbbf251b05a3e5f78b9e8e44c8d59764b474a8f5d48af17e93f451e350c8a3af444f1995b9cd1f2d627818f8081bdfccf0e3c314",
       "resolution": {
@@ -747,6 +813,34 @@
         "resolution": "@typescript-eslint/tsconfig-utils@npm:8.72.0",
         "version": "8.72.0",
         "peerDependencies": {
+          "typescript": ">=4.8.4 <6.1.0"
+        }
+      }
+    },
+    "@typescript-eslint/tsconfig-utils@npm:8.72.1, @typescript-eslint/tsconfig-utils@npm:^8.72.1": {
+      "checksum": "e11519e4905a3c26774d3dbc4739d2c5d85c4574521214b9bfc920d6ab9e181d782e00ea7091f8eab91976194cb7f3fcdbea051e411104df343bf6699ffabaf4",
+      "resolution": {
+        "resolution": "@typescript-eslint/tsconfig-utils@npm:8.72.1",
+        "version": "8.72.1",
+        "peerDependencies": {
+          "typescript": ">=4.8.4 <6.1.0"
+        }
+      }
+    },
+    "@typescript-eslint/type-utils@npm:8.72.1": {
+      "checksum": "1a328c768ea35947a2c765e2d93f28617cb10d7bc8b4633d087839221f67bfc233210ee8b68a6cb3d3b70a458758330f451e069388b4c704a279c2cbe2f1824a",
+      "resolution": {
+        "resolution": "@typescript-eslint/type-utils@npm:8.72.1",
+        "version": "8.72.1",
+        "dependencies": {
+          "@typescript-eslint/types": "8.72.1",
+          "@typescript-eslint/typescript-estree": "8.72.1",
+          "@typescript-eslint/utils": "8.72.1",
+          "debug": "^4.4.3",
+          "ts-api-utils": "^2.5.0"
+        },
+        "peerDependencies": {
+          "eslint": "^8.57.0 || ^9.0.0 || ^10.0.0",
           "typescript": ">=4.8.4 <6.1.0"
         }
       }
@@ -781,6 +875,13 @@
       "resolution": {
         "resolution": "@typescript-eslint/types@npm:8.72.0",
         "version": "8.72.0"
+      }
+    },
+    "@typescript-eslint/types@npm:8.72.1, @typescript-eslint/types@npm:^8.72.1": {
+      "checksum": "d510a1a13975f82e5d9c4eb6ee9b2f71c0383adf03d6ab2baab01feb1bd7c09a00c50d32c9d9a96a96421524fa205688d9193a4efed72315e85bc041dfc5d63a",
+      "resolution": {
+        "resolution": "@typescript-eslint/types@npm:8.72.1",
+        "version": "8.72.1"
       }
     },
     "@typescript-eslint/typescript-estree@npm:8.61.0": {
@@ -825,6 +926,27 @@
         }
       }
     },
+    "@typescript-eslint/typescript-estree@npm:8.72.1": {
+      "checksum": "7e1fcd07448df40bd791be91c4329962c8ab236f7cae1b5dee4771a42bfc98bb62148417081f768c7e522d770df27ae339d9e506d0814d80fa69c9cda0393622",
+      "resolution": {
+        "resolution": "@typescript-eslint/typescript-estree@npm:8.72.1",
+        "version": "8.72.1",
+        "dependencies": {
+          "@typescript-eslint/project-service": "8.72.1",
+          "@typescript-eslint/tsconfig-utils": "8.72.1",
+          "@typescript-eslint/types": "8.72.1",
+          "@typescript-eslint/visitor-keys": "8.72.1",
+          "debug": "^4.4.3",
+          "minimatch": "^10.2.2",
+          "semver": "^7.7.3",
+          "tinyglobby": "^0.2.15",
+          "ts-api-utils": "^2.5.0"
+        },
+        "peerDependencies": {
+          "typescript": ">=4.8.4 <6.1.0"
+        }
+      }
+    },
     "@typescript-eslint/utils@npm:8.61.0, @typescript-eslint/utils@npm:^8.26.0": {
       "checksum": "7e22c85208f9a2557c7d1a0670181bad905e7ea3113553ae2c2c476b737d53f95b0dd535fc3a827d48f93ae3d62a4f36ac07a57718b1a849202784b397c50819",
       "resolution": {
@@ -835,6 +957,23 @@
           "@typescript-eslint/scope-manager": "8.61.0",
           "@typescript-eslint/types": "8.61.0",
           "@typescript-eslint/typescript-estree": "8.61.0"
+        },
+        "peerDependencies": {
+          "eslint": "^8.57.0 || ^9.0.0 || ^10.0.0",
+          "typescript": ">=4.8.4 <6.1.0"
+        }
+      }
+    },
+    "@typescript-eslint/utils@npm:8.72.1": {
+      "checksum": "d0856f5ab5941226b9452e2f95b8d8d4e6706ae42cf76e5456819eea619eb99a3e8de7734776e1bcc96a527351d3eb25af6e7a535d8b1272dac34497e8040e49",
+      "resolution": {
+        "resolution": "@typescript-eslint/utils@npm:8.72.1",
+        "version": "8.72.1",
+        "dependencies": {
+          "@eslint-community/eslint-utils": "^4.9.1",
+          "@typescript-eslint/scope-manager": "8.72.1",
+          "@typescript-eslint/types": "8.72.1",
+          "@typescript-eslint/typescript-estree": "8.72.1"
         },
         "peerDependencies": {
           "eslint": "^8.57.0 || ^9.0.0 || ^10.0.0",
@@ -877,6 +1016,17 @@
         "version": "8.72.0",
         "dependencies": {
           "@typescript-eslint/types": "8.72.0",
+          "eslint-visitor-keys": "^5.0.0"
+        }
+      }
+    },
+    "@typescript-eslint/visitor-keys@npm:8.72.1": {
+      "checksum": "65e447b11a28845734f7c834953c79c39c363d57bfa845622ed6e94d6a6d4b45c6fc578b20f28bc7815e3b2bcd0fa6d28fad1a49b288e80d8abe612315bd1361",
+      "resolution": {
+        "resolution": "@typescript-eslint/visitor-keys@npm:8.72.1",
+        "version": "8.72.1",
+        "dependencies": {
+          "@typescript-eslint/types": "8.72.1",
           "eslint-visitor-keys": "^5.0.0"
         }
       }
@@ -1730,6 +1880,8 @@
           "eslint-plugin-unicorn": "79.0.0",
           "globals": "17.13.0",
           "svelte": "5.57.3",
+          "typescript": "5.9.3",
+          "typescript-eslint": "8.72.1",
           "vite": "8.3.5",
           "vitest": "5.0.5"
         },
@@ -1744,7 +1896,9 @@
           "eslint-plugin-sonarjs": "^4.0.0",
           "eslint-plugin-svelte": "^3.23.0",
           "eslint-plugin-unicorn": ">=74.0.0",
-          "globals": "^16.0.0 || ^17.0.0"
+          "globals": "^16.0.0 || ^17.0.0",
+          "typescript": ">=5.0.0 <6.1.0",
+          "typescript-eslint": "^8.72.0"
         },
         "optionalPeerDependencies": [
           "@vitest/eslint-plugin",
@@ -1753,7 +1907,9 @@
           "eslint-plugin-playwright",
           "eslint-plugin-sonarjs",
           "eslint-plugin-svelte",
-          "eslint-plugin-unicorn"
+          "eslint-plugin-unicorn",
+          "typescript",
+          "typescript-eslint"
         ]
       }
     },
@@ -2261,6 +2417,13 @@
       "resolution": {
         "resolution": "ignore@npm:5.3.2",
         "version": "5.3.2"
+      }
+    },
+    "ignore@npm:^7.0.5": {
+      "checksum": "c2ee928d8fac5a1fc3b0bf9213cb9b393f0bd8b10197a40f1fadda246d31c83172d82ac74755463130b9e5220d0f673283af1966e896a9e23c335fb6ce17fcb3",
+      "resolution": {
+        "resolution": "ignore@npm:7.0.14",
+        "version": "7.0.14"
       }
     },
     "imurmurhash@npm:^0.1.4": {
@@ -3547,6 +3710,13 @@
         }
       }
     },
+    "typescript@npm:5.9.3": {
+      "checksum": "55317d5ebb926ec9d67187e74fa5cfc50ce226f042671138514e20af6597932d3991211f3190131a62adfa43a73a79ac0445e59f35242b44f0384b2f9aca9db4",
+      "resolution": {
+        "resolution": "typescript@npm:5.9.3",
+        "version": "5.9.3"
+      }
+    },
     "typescript@npm:>=5 <6.1.0": {
       "checksum": "4c4b3eed4bdd784df1cb0ef0996b7d18e17aa02797728256170087cf063fd39dd5df72f7c62d53f52126ec94d2f48fe03df0028e22bff8657039dfd802f20f95",
       "resolution": {
@@ -3554,11 +3724,35 @@
         "version": "6.0.3"
       }
     },
+    "typescript@patch:typescript%40npm%3A5.9.3#<builtin>": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "typescript@patch:typescript%40npm%3A5.9.3#<builtin>&checksum=794343709b38fa2bda6fba140153ca2f2a3a19c87e96198fc70af6ad8b94ae00f2ad0a67d10282e87b9b1322a8322f9137f2d0877b8245a2af96d92d21a23f61",
+        "version": "5.9.3"
+      }
+    },
     "typescript@patch:typescript%40npm%3A%3E%3D5%20%3C6.1.0#<builtin>": {
       "checksum": null,
       "resolution": {
         "resolution": "typescript@patch:typescript%40npm%3A6.0.3#<builtin>&checksum=794343709b38fa2bda6fba140153ca2f2a3a19c87e96198fc70af6ad8b94ae00f2ad0a67d10282e87b9b1322a8322f9137f2d0877b8245a2af96d92d21a23f61",
         "version": "6.0.3"
+      }
+    },
+    "typescript-eslint@npm:8.72.1": {
+      "checksum": "23c1193ec2d2dca5ad97f143168400ed6fdaa7855979aa71fea5818c10c842d98b612e9acfd1405a86f683c499aea1789845597cc7eadb97ec3594c3b0eca2f4",
+      "resolution": {
+        "resolution": "typescript-eslint@npm:8.72.1",
+        "version": "8.72.1",
+        "dependencies": {
+          "@typescript-eslint/eslint-plugin": "8.72.1",
+          "@typescript-eslint/parser": "8.72.1",
+          "@typescript-eslint/typescript-estree": "8.72.1",
+          "@typescript-eslint/utils": "8.72.1"
+        },
+        "peerDependencies": {
+          "eslint": "^8.57.0 || ^9.0.0 || ^10.0.0",
+          "typescript": ">=4.8.4 <6.1.0"
+        }
       }
     },
     "undici@npm:^8.4.1": {
