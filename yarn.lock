@@ -1,11 +1,6 @@
 {
   "__metadata": {
-    "version": 9
-  },
-  "project": {
-    "workspaces": {
-      "eslint-nostandard": "d321fded48d305a732fb62483f574753f6eceda1e8418b44341318c12865ffd6c6527ef1d57acbe651c8535a6a35cb5bffbc22a121b60dae55c11d2855988574"
-    }
+    "version": 10
   },
   "entries": {
     "@cacheable/memory@npm:^2.2.0": {
@@ -180,7 +175,7 @@
         }
       }
     },
-    "@humanfs/node@npm:^0.16.6": {
+    "@humanfs/node@npm:^0.16.8": {
       "checksum": "806884ef4fd1b97e61ec6802632572a1d74c2c414d4d827eab2f383f6cc0fdecc044e42b68564f7073c88222c7311d6b6523dcc30ebfc96bfffeaac68828c735",
       "resolution": {
         "resolution": "@humanfs/node@npm:0.16.8",
@@ -1655,11 +1650,11 @@
         "version": "5.0.0"
       }
     },
-    "eslint@npm:10.13.0": {
-      "checksum": "f67cc859ad5c5099baeab6e6a906fbb3518bf1713f357da042e43b0bb9611b3cd2f2b69dfff494ac9c8f20b671574334d4a44d34f72f8f8cf961f6dd26085516",
+    "eslint@npm:10.14.0": {
+      "checksum": "10ef779d61e6b6c9658ab19571dc568eeaa51b3718ddc46398c2764375c0db2c683b655ddceef020daaa17085761cac630f34438fb9bf4b55f25325ec8089bdb",
       "resolution": {
-        "resolution": "eslint@npm:10.13.0",
-        "version": "10.13.0",
+        "resolution": "eslint@npm:10.14.0",
+        "version": "10.14.0",
         "dependencies": {
           "@eslint-community/eslint-utils": "^4.8.0",
           "@eslint-community/regexpp": "^4.12.2",
@@ -1667,7 +1662,7 @@
           "@eslint/config-helpers": "^0.7.0",
           "@eslint/core": "^1.2.1",
           "@eslint/plugin-kit": "^0.7.3",
-          "@humanfs/node": "^0.16.6",
+          "@humanfs/node": "^0.16.8",
           "@humanwhocodes/module-importer": "^1.0.1",
           "@humanwhocodes/retry": "^0.4.2",
           "@types/estree": "^1.0.6",
@@ -1688,7 +1683,7 @@
           "imurmurhash": "^0.1.4",
           "is-glob": "^4.0.0",
           "json-stable-stringify-without-jsonify": "^1.0.1",
-          "minimatch": "^10.2.5",
+          "minimatch": "^10.2.6",
           "natural-compare": "^1.4.0",
           "optionator": "^0.9.3"
         },
@@ -1714,6 +1709,51 @@
         },
         "optionalPeerDependencies": [
           "unrs-resolver"
+        ]
+      }
+    },
+    "eslint-nostandard@workspace:^": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "eslint-nostandard@workspace:eslint-nostandard",
+        "version": "1.5.0",
+        "dependencies": {
+          "@eslint/js": "10.0.1",
+          "@stylistic/eslint-plugin": "5.10.0",
+          "@vitest/eslint-plugin": "1.6.28",
+          "eslint": "10.14.0",
+          "eslint-plugin-functional": "10.0.1",
+          "eslint-plugin-import-x": "4.17.1",
+          "eslint-plugin-playwright": "2.12.1",
+          "eslint-plugin-sonarjs": "4.2.2",
+          "eslint-plugin-svelte": "3.23.1",
+          "eslint-plugin-unicorn": "79.0.0",
+          "globals": "17.13.0",
+          "svelte": "5.57.3",
+          "vite": "8.3.5",
+          "vitest": "5.0.5"
+        },
+        "peerDependencies": {
+          "@eslint/js": "^9.0.0 || ^10.0.0",
+          "@stylistic/eslint-plugin": "^5.0.0",
+          "@vitest/eslint-plugin": "^1.6.0",
+          "eslint": "^9.0.0 || ^10.0.0",
+          "eslint-plugin-functional": "^10.0.0",
+          "eslint-plugin-import-x": "^4.16.0",
+          "eslint-plugin-playwright": "^2.10.0",
+          "eslint-plugin-sonarjs": "^4.0.0",
+          "eslint-plugin-svelte": "^3.23.0",
+          "eslint-plugin-unicorn": ">=74.0.0",
+          "globals": "^16.0.0 || ^17.0.0"
+        },
+        "optionalPeerDependencies": [
+          "@vitest/eslint-plugin",
+          "eslint-plugin-functional",
+          "eslint-plugin-import-x",
+          "eslint-plugin-playwright",
+          "eslint-plugin-sonarjs",
+          "eslint-plugin-svelte",
+          "eslint-plugin-unicorn"
         ]
       }
     },
@@ -2901,7 +2941,7 @@
         }
       }
     },
-    "minimatch@npm:^10.2.5, minimatch@npm:^9.0.3 || ^10.1.2": {
+    "minimatch@npm:^9.0.3 || ^10.1.2": {
       "checksum": "bf94cbc42fefdf758d56baf108276eb30d0de76ea2751b3de30b967ac7db250854844a339c339e04fb02bc36237fc921326d968b68b6f91ab4bf29a434828c40",
       "resolution": {
         "resolution": "minimatch@npm:10.2.5",
@@ -3371,11 +3411,11 @@
         "version": "4.1.1"
       }
     },
-    "svelte@npm:5.57.2": {
-      "checksum": "740d1c3adb5bf6ab671fc05d23085d9b296da939f6f8c72a3eea8c1549515b58e03cfd3dce199134cc8f07751a597a6a630bd6e5c340cb04884dd1c5c6d007cd",
+    "svelte@npm:5.57.3": {
+      "checksum": "d65587283e5587935ee348edc12885b510c26547e694e032bcd95b9598e658ac742c00748a2d0a2f1f7201c989130db9fb9cd234729f27c6196c60c73333df56",
       "resolution": {
-        "resolution": "svelte@npm:5.57.2",
-        "version": "5.57.2",
+        "resolution": "svelte@npm:5.57.3",
+        "version": "5.57.3",
         "dependencies": {
           "@jridgewell/remapping": "^2.3.5",
           "@jridgewell/sourcemap-codec": "^1.6.0",

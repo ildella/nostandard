@@ -7,7 +7,7 @@ const rules = {
   'unicorn/import-style': 'off',
   'unicorn/name-replacements': 'off',
   'unicorn/no-array-callback-reference': 'off',
-  'unicorn/no-array-for-each': 'off',
+  'unicorn/no-for-each': 'off',
   'unicorn/no-array-reduce': 'off',
   'unicorn/no-array-sort': ['warn', {allowExpressionStatement: false}],
   'unicorn/no-computed-property-existence-check': 'warn',
