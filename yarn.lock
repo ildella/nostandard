@@ -1265,14 +1265,14 @@
         ]
       }
     },
-    "@vitest/mocker@npm:5.0.5": {
-      "checksum": "bc4662d7c44dd9841006220d881b084c68a7600f974dee34b7ff30ccf1392851726ca273cba5039083183a1b70c0675852a5d0c5c7f78f3a8f367f5e7a2b4f10",
+    "@vitest/mocker@npm:5.1.0": {
+      "checksum": "e5ed603de56ebf7d501b1d755487e7d22dfa986c930a82dc2e35ee36b88a0d5913785bbcfcab11f35ba5b611eb51ba4a1fb0bab37754e05e42ccb9fdd6ad4f6f",
       "resolution": {
-        "resolution": "@vitest/mocker@npm:5.0.5",
-        "version": "5.0.5",
+        "resolution": "@vitest/mocker@npm:5.1.0",
+        "version": "5.1.0",
         "dependencies": {
           "@jridgewell/trace-mapping": "0.3.31",
-          "@vitest/spy": "5.0.5",
+          "@vitest/spy": "5.1.0",
           "estree-walker": "^3.0.3",
           "magic-string": "^1.4.3"
         },
@@ -1286,11 +1286,11 @@
         ]
       }
     },
-    "@vitest/spy@npm:5.0.5": {
-      "checksum": "23dc04ee5c14164f099b1e7ba68a55ada16f8db7a65b9511dbd51a0ec88095354bde8906c86de0a323acdab5c70c3b1b864a0111d7eaf7e91a146e54ce649771",
+    "@vitest/spy@npm:5.1.0": {
+      "checksum": "2cfe75667050a06fe5eb9cdc8fd5cffd6549dfb9aace02547bf9eab367323c00aa1f2a086ba5c517a8ac8845c0f48ab84b5074e81958b7d512846e53c71452c9",
       "resolution": {
-        "resolution": "@vitest/spy@npm:5.0.5",
-        "version": "5.0.5"
+        "resolution": "@vitest/spy@npm:5.1.0",
+        "version": "5.1.0"
       }
     },
     "abbrev@npm:^5.0.0": {
@@ -1716,7 +1716,7 @@
       "checksum": null,
       "resolution": {
         "resolution": "eslint-nostandard@workspace:eslint-nostandard",
-        "version": "1.5.0",
+        "version": "1.5.1",
         "dependencies": {
           "@eslint/js": "10.0.1",
           "@stylistic/eslint-plugin": "5.10.0",
@@ -1724,14 +1724,14 @@
           "eslint": "10.14.0",
           "eslint-plugin-functional": "10.0.1",
           "eslint-plugin-import-x": "4.17.1",
-          "eslint-plugin-playwright": "2.12.1",
+          "eslint-plugin-playwright": "2.12.2",
           "eslint-plugin-sonarjs": "4.2.2",
-          "eslint-plugin-svelte": "3.23.1",
+          "eslint-plugin-svelte": "3.24.0",
           "eslint-plugin-unicorn": "79.0.0",
-          "globals": "17.13.0",
+          "globals": "17.14.0",
           "svelte": "5.57.3",
           "vite": "8.3.5",
-          "vitest": "5.0.5"
+          "vitest": "5.1.0"
         },
         "peerDependencies": {
           "@eslint/js": "^9.0.0 || ^10.0.0",
@@ -1806,11 +1806,11 @@
         ]
       }
     },
-    "eslint-plugin-playwright@npm:2.12.1": {
-      "checksum": "01f4bc2e229f2c1f3a8d65ea3ebad73104e550344e009579a8a99427e071772eba7a637464df0f86bab58d5584fb5b771097b839f4fb118a46804c9a91f8c5b3",
+    "eslint-plugin-playwright@npm:2.12.2": {
+      "checksum": "eae5488fc0b51c62acbabac566f9d7974c0542122bd1f81de98b11665262faffd4cb261e353b207078dbb48d926249a5bf5d0e2b93004be9958165d100893dbf",
       "resolution": {
-        "resolution": "eslint-plugin-playwright@npm:2.12.1",
-        "version": "2.12.1",
+        "resolution": "eslint-plugin-playwright@npm:2.12.2",
+        "version": "2.12.2",
         "dependencies": {
           "globals": "^17.3.0"
         },
@@ -1845,22 +1845,22 @@
         }
       }
     },
-    "eslint-plugin-svelte@npm:3.23.1": {
-      "checksum": "849e97489e647ca129389dc9c6a0ce6475d3b8dd44258a54523c05cfe60aadf6a468c18587d11b9f06072c9c4fb90b489703da282a56b75297c202f0385f1332",
+    "eslint-plugin-svelte@npm:3.24.0": {
+      "checksum": "62588ef001a1f095ff54acae60ea64f4c9caa65c10e9a0f252dc46fb681cdcfd3862d990a3991956eb4d545433d778083da55294df65fdcf01e6c288e1a6b778",
       "resolution": {
-        "resolution": "eslint-plugin-svelte@npm:3.23.1",
-        "version": "3.23.1",
+        "resolution": "eslint-plugin-svelte@npm:3.24.0",
+        "version": "3.24.0",
         "dependencies": {
           "@eslint-community/eslint-utils": "^4.6.1",
           "@jridgewell/sourcemap-codec": "^1.5.0",
           "esutils": "^2.0.3",
           "globals": "^16.0.0",
           "known-css-properties": "^0.37.0",
-          "postcss": "^8.4.49",
+          "postcss": "^8.5.10",
           "postcss-load-config": "^3.1.4",
           "postcss-safe-parser": "^7.0.0",
           "semver": "^7.6.3",
-          "svelte-eslint-parser": "^1.7.0"
+          "svelte-eslint-parser": "^1.10.1"
         },
         "peerDependencies": {
           "eslint": "^8.57.1 || ^9.0.0 || ^10.0.0",
@@ -2194,11 +2194,11 @@
         }
       }
     },
-    "globals@npm:17.13.0, globals@npm:^17.12.0": {
-      "checksum": "8c57e3e9660b3514e8e960db145e81c637e5fb9a68691aa0f39a075e9e80c0f4360b6423e6c9d63c46eda57657c6129965485bd0a9383b223cf40acdb8d82561",
+    "globals@npm:17.14.0": {
+      "checksum": "361f7f7d9c27ec1fcab60ae4f4f2d9f54511a79b0f3eef22093938801c4b241c57558c74ee1f8ac84982c086a7d75d9bba30a07a66b899cbac687a74d44159b8",
       "resolution": {
-        "resolution": "globals@npm:17.13.0",
-        "version": "17.13.0"
+        "resolution": "globals@npm:17.14.0",
+        "version": "17.14.0"
       }
     },
     "globals@npm:^16.0.0": {
@@ -2206,6 +2206,13 @@
       "resolution": {
         "resolution": "globals@npm:16.5.0",
         "version": "16.5.0"
+      }
+    },
+    "globals@npm:^17.12.0": {
+      "checksum": "8c57e3e9660b3514e8e960db145e81c637e5fb9a68691aa0f39a075e9e80c0f4360b6423e6c9d63c46eda57657c6129965485bd0a9383b223cf40acdb8d82561",
+      "resolution": {
+        "resolution": "globals@npm:17.13.0",
+        "version": "17.13.0"
       }
     },
     "globals@npm:^17.3.0": {
@@ -3145,6 +3152,18 @@
         }
       }
     },
+    "postcss@npm:^8.5.10": {
+      "checksum": "4197579176523d602af667ca8b94e94f29de5367ac3158b4e76f6fef95b67eb2ccc859bdb9b9defa1bf1c79532723f561a57e37b31f363acb3cbb450d56454fe",
+      "resolution": {
+        "resolution": "postcss@npm:8.5.32",
+        "version": "8.5.32",
+        "dependencies": {
+          "nanoid": "^3.3.20",
+          "picocolors": "^1.1.1",
+          "source-map-js": "^1.2.2"
+        }
+      }
+    },
     "postcss@npm:^8.5.30": {
       "checksum": "cb9b9e72ee4a1376406ff49e2e9846d33308f48c0d5a5de5e73e587f00854060d6e62f7319b9d682ec31d30aa1c916c8cc70d67e06fc399c7686c89fb7300ba3",
       "resolution": {
@@ -3435,11 +3454,11 @@
         }
       }
     },
-    "svelte-eslint-parser@npm:^1.7.0": {
-      "checksum": "acaac0a887b5eba56e70bad163ac9f7cf7e5bb17deca965afe74ada6fb17692850dcd43f7ebc6abc3faf520c5bfb5464c08598d972b6a94cef3a5c6b8cad33f7",
+    "svelte-eslint-parser@npm:^1.10.1": {
+      "checksum": "a24966c2ff88d5f25feb9c72d30d12481d7b01096b81372816864f191a514649f1deb4d8b6e9e5b0d13126b4b6b65c7176b66b49a570736bfb93be3cc3a7664d",
       "resolution": {
-        "resolution": "svelte-eslint-parser@npm:1.8.0",
-        "version": "1.8.0",
+        "resolution": "svelte-eslint-parser@npm:1.10.1",
+        "version": "1.10.1",
         "dependencies": {
           "eslint-scope": "^8.2.0",
           "eslint-visitor-keys": "^4.0.0",
@@ -3701,14 +3720,14 @@
         ]
       }
     },
-    "vitest@npm:5.0.5": {
-      "checksum": "c76701d22e7a52a7e97e5a7e7ddec95ba871ef9bca6498ee5e7ca9edf7e05c0c4972703bc07bfbe70b47b7cb930f489336ee9ad96acd070258ac826d86a769f2",
+    "vitest@npm:5.1.0": {
+      "checksum": "c0f23454604f72437df5e045080ab1855dea3c5fe85be84ed19c52863306d7af539299e5df01d7e52b888ac6a14b00db6597ecd8ab6129ffb40bdf66f7bed2fb",
       "resolution": {
-        "resolution": "vitest@npm:5.0.5",
-        "version": "5.0.5",
+        "resolution": "vitest@npm:5.1.0",
+        "version": "5.1.0",
         "dependencies": {
           "@types/chai": "^5.2.2",
-          "@vitest/mocker": "5.0.5",
+          "@vitest/mocker": "5.1.0",
           "chai": "^6.3.0",
           "es-module-lexer": "^2.3.2",
           "expect-type": "^1.4.0",
@@ -3725,12 +3744,12 @@
           "@edge-runtime/vm": "*",
           "@opentelemetry/api": "^1.9.0",
           "@types/node": "^22.0.0 || >=24.0.0",
-          "@vitest/browser-playwright": "5.0.5",
-          "@vitest/browser-preview": "5.0.5",
+          "@vitest/browser-playwright": "5.1.0",
+          "@vitest/browser-preview": "5.1.0",
           "@vitest/browser-webdriverio": "^5.0.0-beta.5 || >=5.0.0",
-          "@vitest/coverage-istanbul": "5.0.5",
-          "@vitest/coverage-v8": "5.0.5",
-          "@vitest/ui": "5.0.5",
+          "@vitest/coverage-istanbul": "5.1.0",
+          "@vitest/coverage-v8": "5.1.0",
+          "@vitest/ui": "5.1.0",
           "happy-dom": "*",
           "jsdom": "*",
           "vite": "^6.4.0 || ^7.0.0 || ^8.0.0"
