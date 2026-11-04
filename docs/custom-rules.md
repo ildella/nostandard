@@ -115,9 +115,11 @@ Enabled in `base` as `'warn'` with the selectors below.
 | --- | --- |
 | `MethodDefinition[kind="get"]`, `MethodDefinition[kind="set"]` | no accessors on classes |
 | `Property[kind="get"]`, `Property[kind="set"]` | no accessors on object literals |
-| `CallExpression[callee.name='spyOn'][arguments.0.name='console']` | no spying on console |
-| `CallExpression[callee.property.name='spyOn'][arguments.0.name='console']` | same, for `jest.spyOn` / `vi.spyOn` |
 | `Promise.resolve(null)` | use an exception or a real value |
+
+Spying on `console` is not banned: `spyOn(console, 'log')` and
+`jest.spyOn(console, 'log')` are allowed, and there is no selector for them
+in the default list.
 
 Options are the core rule's, unchanged:
 
@@ -139,6 +141,11 @@ A string entry gets the core rule's generated message
 ### Details
 
 - The default list lives in `src/configs/restricted-syntax.js`.
+- The accessor selectors are exported as `accessorSyntaxList` and the
+  `Promise.resolve(null)` one as `promiseSyntaxList`.
+- The svelte config applies the rule only to `**/*.svelte`, `**/*.svelte.js`
+  and `**/*.svelte.ts`, with the accessor bans off: those files keep the
+  `Promise.resolve(null)` ban only.
 - Severity is yours: `'off'` silences the whole list for a project, and a
   project-level array replaces it.
 - It is still **one** ruleId for all entries: `eslint-disable-next-line

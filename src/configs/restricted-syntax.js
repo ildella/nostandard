@@ -1,6 +1,4 @@
-const SPY_MESSAGE = 'Thou shalt not use spyOn on console logs.'
-
-export const restrictedSyntaxList = [
+export const accessorSyntaxList = [
   {
     selector: 'MethodDefinition[kind="get"]',
     message: 'Getters are forbidden.' +
@@ -20,16 +18,9 @@ export const restrictedSyntaxList = [
     selector: 'Property[kind="set"]',
     message: 'Object setters are forbidden.',
   },
-  {
-    selector: 'CallExpression[callee.name=\'spyOn\']' +
-      '[arguments.0.name=\'console\']',
-    message: SPY_MESSAGE,
-  },
-  {
-    selector: 'CallExpression[callee.property.name=\'spyOn\']' +
-      '[arguments.0.name=\'console\']',
-    message: SPY_MESSAGE,
-  },
+]
+
+export const promiseSyntaxList = [
   {
     selector: 'CallExpression[callee.object.name=\'Promise\']' +
       '[callee.property.name=\'resolve\']' +
@@ -37,4 +28,9 @@ export const restrictedSyntaxList = [
     message: 'Only losers use Promise.resolve(null).' +
       ' Real men throw an exception.',
   },
+]
+
+export const restrictedSyntaxList = [
+  ...accessorSyntaxList,
+  ...promiseSyntaxList,
 ]

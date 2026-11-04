@@ -57,22 +57,20 @@ test('object getters and setters are reported', () => {
   expect(findRule(lint(code))).toHaveLength(2)
 })
 
-test('spying on console is reported', () => {
+test('spying on console is not banned', () => {
   const code = [
     'export const spy = () => spyOn(console, \'log\')',
     '',
   ].join('\n')
-  const hits = findRule(lint(code))
-  expect(hits).toHaveLength(1)
-  expect(hits[0].message).toContain('console logs')
+  expect(findRule(lint(code))).toHaveLength(0)
 })
 
-test('jest.spyOn on console is reported once', () => {
+test('jest.spyOn on console is not banned', () => {
   const code = [
     'export const spy = () => jest.spyOn(console, \'log\')',
     '',
   ].join('\n')
-  expect(findRule(lint(code))).toHaveLength(1)
+  expect(findRule(lint(code))).toHaveLength(0)
 })
 
 test('Promise.resolve(null) is reported', () => {

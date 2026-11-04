@@ -1,11 +1,17 @@
 import eslintPluginSvelte from 'eslint-plugin-svelte'
+import {plugin} from '../rules/index.js'
+import {promiseSyntaxList} from './restricted-syntax.js'
 
 export default [
   ...eslintPluginSvelte.configs['flat/recommended'],
   {
     name: 'nostandard/svelte',
-    files: ['**/*.svelte', '**/*.svelte.js'],
+    files: ['**/*.svelte', '**/*.svelte.js', '**/*.svelte.ts'],
+    plugins: {nostandard: plugin},
     rules: {
+      // Accessors are off here: Svelte components and runes modules use them.
+      // The Promise.resolve(null) ban still applies.
+      'nostandard/restricted-syntax': ['warn', ...promiseSyntaxList],
       'svelte/html-closing-bracket-new-line': ['warn',
         {
           singleline: 'never',
