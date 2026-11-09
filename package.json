@@ -1,6 +1,6 @@
 {
   "name": "eslint-nostandard",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "Eslint standard for bad people.",
   "license": "MIT",
   "type": "module",
@@ -32,7 +32,22 @@
     "./functional": "./src/configs/functional.js",
     "./unicorn": "./src/configs/unicorn.js",
     "./playwright": "./src/configs/playwright.js",
-    "./plugin": "./src/rules/index.js"
+    "./plugin": "./src/rules/index.js",
+    "./oxlint": "./src/generated/recommended.oxlint.json",
+    "./oxlint/functional": "./src/generated/functional.oxlint.json",
+    "./oxlint/unicorn": "./src/generated/unicorn.oxlint.json",
+    "./oxlint/vitest": "./src/generated/vitest.oxlint.json",
+    "./oxlint/import-x": "./src/generated/import-x.oxlint.json",
+    "./oxlint/sonarjs": "./src/generated/sonarjs.oxlint.json",
+    "./oxlint/playwright": "./src/generated/playwright.oxlint.json",
+    "./oxlint/eslint-off": "./src/generated/recommended.eslint-off.json",
+    "./oxlint/eslint-off/functional": "./src/generated/functional.eslint-off.json",
+    "./oxlint/eslint-off/unicorn": "./src/generated/unicorn.eslint-off.json",
+    "./oxlint/eslint-off/vitest": "./src/generated/vitest.eslint-off.json",
+    "./oxlint/eslint-off/import-x": "./src/generated/import-x.eslint-off.json",
+    "./oxlint/eslint-off/sonarjs": "./src/generated/sonarjs.eslint-off.json",
+    "./oxlint/eslint-off/playwright": "./src/generated/playwright.eslint-off.json",
+    "./oxlint/plugin": "./src/oxlint/plugin.js"
   },
   "files": [
     "src"
@@ -41,31 +56,37 @@
     "audit": "yarn npm audit",
     "audit.prod": "yarn npm audit --recursive --environment production --severity moderate",
     "check:lint": "eslint --report-unused-disable-directives .",
+    "generate:oxlint": "node scripts/generate-oxlint.js",
     "lint": "eslint . --cache --max-warnings 1",
     "lint.nocache": "eslint . --max-warnings 0",
     "lint.inspect": "npx @eslint/config-inspector",
+    "snapshot:eslint": "node scripts/write-eslint-snapshot.js",
     "test": "vitest",
     "test.ci": "vitest run",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "lint:combo": "node scripts/check-combo.js"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
+    "@oxlint/migrate": "1.92.0",
     "@stylistic/eslint-plugin": "5.10.0",
     "@vitest/eslint-plugin": "1.6.28",
     "eslint": "10.14.0",
     "eslint-plugin-functional": "10.0.1",
-    "eslint-plugin-import-x": "4.17.1",
+    "eslint-plugin-import-x": "4.18.1",
     "eslint-plugin-playwright": "2.12.2",
     "eslint-plugin-sonarjs": "4.2.2",
-    "eslint-plugin-svelte": "3.24.0",
+    "eslint-plugin-svelte": "3.24.1",
     "eslint-plugin-unicorn": "79.0.0",
     "globals": "17.14.0",
+    "oxlint": "1.93.0",
     "svelte": "5.57.3",
-    "vite": "8.3.5",
+    "vite": "8.3.7",
     "vitest": "5.1.0"
   },
   "peerDependencies": {
     "@eslint/js": "^9.0.0 || ^10.0.0",
+    "@oxlint/migrate": "~1.92.0",
     "@stylistic/eslint-plugin": "^5.0.0",
     "@vitest/eslint-plugin": "^1.6.0",
     "eslint": "^9.0.0 || ^10.0.0",
@@ -75,9 +96,13 @@
     "eslint-plugin-sonarjs": "^4.0.0",
     "eslint-plugin-svelte": "^3.23.0",
     "eslint-plugin-unicorn": ">=74.0.0",
-    "globals": "^16.0.0 || ^17.0.0"
+    "globals": "^16.0.0 || ^17.0.0",
+    "oxlint": "~1.92.0"
   },
   "peerDependenciesMeta": {
+    "@oxlint/migrate": {
+      "optional": true
+    },
     "@vitest/eslint-plugin": {
       "optional": true
     },
@@ -97,6 +122,9 @@
       "optional": true
     },
     "eslint-plugin-unicorn": {
+      "optional": true
+    },
+    "oxlint": {
       "optional": true
     }
   }

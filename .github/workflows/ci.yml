@@ -30,5 +30,11 @@ jobs:
       - name: Run tests
         run: yarn test.ci
 
+      - name: Generated Oxlint config is current
+        run: yarn generate:oxlint && git diff --exit-code
+
+      - name: Oxlint + ESLint parity
+        run: yarn lint:combo
+
       - name: Run audit
         run: yarn audit.prod

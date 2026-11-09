@@ -1,0 +1,83 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "off",
+    "nursery": "off",
+    "pedantic": "off",
+    "perf": "off",
+    "restriction": "off",
+    "style": "off",
+    "suspicious": "off"
+  },
+  "env": {
+    "builtin": true
+  },
+  "ignorePatterns": [
+    "**/*.svelte",
+    "**/*.svelte.js",
+    "**/*.svelte.ts"
+  ],
+  "jsPlugins": [
+    {
+      "name": "nostandard",
+      "specifier": "eslint-nostandard/oxlint/plugin"
+    }
+  ],
+  "overrides": [
+    {
+      "files": [
+        "tests/**/*.js",
+        "**/*.test.js"
+      ],
+      "globals": {
+        "afterAll": "writable",
+        "afterEach": "writable",
+        "assert": "writable",
+        "assertType": "writable",
+        "beforeAll": "writable",
+        "beforeEach": "writable",
+        "chai": "writable",
+        "describe": "writable",
+        "expect": "writable",
+        "expectTypeOf": "writable",
+        "it": "writable",
+        "onTestFailed": "writable",
+        "onTestFinished": "writable",
+        "suite": "writable",
+        "test": "writable",
+        "vi": "writable",
+        "vitest": "writable"
+      },
+      "plugins": [
+        "vitest"
+      ],
+      "rules": {
+        "no-undefined": "off",
+        "vitest/expect-expect": "error",
+        "vitest/max-nested-describe": [
+          "error",
+          {
+            "max": 1
+          }
+        ],
+        "vitest/no-commented-out-tests": "warn",
+        "vitest/no-disabled-tests": "warn",
+        "vitest/no-focused-tests": "error",
+        "vitest/no-identical-title": "error",
+        "vitest/no-import-node-test": "error",
+        "vitest/no-interpolation-in-snapshots": "error",
+        "vitest/no-mocks-import": "error",
+        "vitest/no-standalone-expect": "error",
+        "vitest/no-unneeded-async-expect-function": "error",
+        "vitest/prefer-called-exactly-once-with": "error",
+        "vitest/prefer-expect-resolves": "warn",
+        "vitest/require-local-test-context-for-concurrent-snapshots": "error",
+        "vitest/valid-describe-callback": "error",
+        "vitest/valid-expect-in-promise": "error",
+        "vitest/valid-title": "error"
+      }
+    }
+  ],
+  "plugins": [],
+  "rules": {}
+}

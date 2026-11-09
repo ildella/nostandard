@@ -1,0 +1,32 @@
+[
+  {
+    "files": [
+      "tests/**/*.js",
+      "**/*.test.js"
+    ],
+    "ignores": [
+      "**/*.svelte",
+      "**/*.svelte.js",
+      "**/*.svelte.ts"
+    ],
+    "rules": {
+      "vitest/expect-expect": "off",
+      "vitest/max-nested-describe": "off",
+      "vitest/no-commented-out-tests": "off",
+      "vitest/no-disabled-tests": "off",
+      "vitest/no-focused-tests": "off",
+      "vitest/no-identical-title": "off",
+      "vitest/no-import-node-test": "off",
+      "vitest/no-interpolation-in-snapshots": "off",
+      "vitest/no-mocks-import": "off",
+      "vitest/no-standalone-expect": "off",
+      "vitest/no-unneeded-async-expect-function": "off",
+      "vitest/prefer-called-exactly-once-with": "off",
+      "vitest/prefer-expect-resolves": "off",
+      "vitest/require-local-test-context-for-concurrent-snapshots": "off",
+      "vitest/valid-describe-callback": "off",
+      "vitest/valid-expect-in-promise": "off",
+      "vitest/valid-title": "off"
+    }
+  }
+]

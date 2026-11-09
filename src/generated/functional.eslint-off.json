@@ -1,0 +1,27 @@
+[
+  {
+    "files": [
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.mjs",
+      "**/*.cjs",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.mts",
+      "**/*.cts"
+    ],
+    "ignores": [
+      "**/*.svelte",
+      "**/*.svelte.js",
+      "**/*.svelte.ts"
+    ],
+    "rules": {
+      "functional/no-class-inheritance": "off",
+      "functional/no-classes": "off",
+      "functional/no-let": "off",
+      "functional/no-this-expressions": "off",
+      "no-param-reassign": "off",
+      "nostandard/no-empty-sentinel": "off"
+    }
+  }
+]

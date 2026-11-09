@@ -2,6 +2,40 @@
 
 All notable changes to this project are documented in this file.
 
+## 1.6.0
+
+### Added
+
+- Generated Oxlint configs and ESLint off-sets, published under
+  `eslint-nostandard/oxlint/*`: `oxlint`, `oxlint/functional`,
+  `oxlint/unicorn`, `oxlint/vitest`, `oxlint/import-x`, `oxlint/sonarjs`,
+  `oxlint/playwright`, with the matching `oxlint/eslint-off/*` pair.
+- `docs/oxlint.md`: how to adopt Oxlint next to ESLint, including overrides,
+  `.gitignore` behaviour and rollback.
+
+### Changed
+
+- The ESLint path is unchanged: existing imports, exports and rule behaviour
+  stay exactly as they were in 1.5.x.
+- The generated ESLint off-sets are arrays of file-scoped config objects,
+  mirroring the scope of the slice they pair with: global rules apply to `.js`,
+  `.jsx`, `.mjs`, `.cjs`, `.ts`, `.tsx`, `.mts` and `.cts`, and file-scoped
+  slices (`vitest`, `import-x`, `playwright`) only turn rules off on their own
+  globs. They exclude `**/*.svelte`, `**/*.svelte.js` and `**/*.svelte.ts`, so
+  Svelte keeps its rules on ESLint. Rules that Oxlint keeps `off` inside a slice
+  never reach the off-set.
+- The root Oxlint config must declare the Svelte `ignorePatterns`: `extends`
+  drops the ones published in the slice, and without them Oxlint lints
+  `.svelte` script blocks with the non-Svelte rule options.
+
+### Notes
+
+- Svelte stays ESLint-only. There is no Oxlint twin for
+  `eslint-nostandard/svelte`.
+- `oxlint` and `@oxlint/migrate` are optional peer dependencies.
+- `vitest/no-conditional-expect` and `vitest/valid-expect` stay on ESLint on
+  purpose: Oxlint accepts them but does not implement them correctly.
+
 ## 1.5.1
 
 ### Changed

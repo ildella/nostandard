@@ -23,6 +23,7 @@ A consolidation of my old [eslint configurations](https://github.com/ildella/esl
 - **functional** — functional recommended rules with curated overrides, plus `nostandard/no-empty-sentinel` (optional, subpath import)
 - **unicorn** — unicorn recommended rules with curated overrides (optional, subpath import)
 - **playwright** — Playwright recommended rules for `e2e/` files (optional, subpath import)
+- **Oxlint**: run the same rules with [Oxlint](docs/oxlint.md); ESLint keeps the rest, including Svelte.
 
 ### Packages at a glance
 

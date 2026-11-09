@@ -1,0 +1,23 @@
+[
+  {
+    "files": [
+      "src/**/*.js",
+      "src/**/*.svelte*",
+      "tests/**/*.js"
+    ],
+    "ignores": [
+      "**/*.svelte",
+      "**/*.svelte.js",
+      "**/*.svelte.ts"
+    ],
+    "rules": {
+      "import-x/max-dependencies": "off",
+      "import-x/no-default-export": "off",
+      "import-x/no-duplicates": "off",
+      "import-x/no-dynamic-require": "off",
+      "import-x/no-mutable-exports": "off",
+      "import-x/no-named-as-default-member": "off",
+      "import-x/no-self-import": "off"
+    }
+  }
+]

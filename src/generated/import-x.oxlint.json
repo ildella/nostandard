@@ -1,0 +1,57 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "off",
+    "nursery": "off",
+    "pedantic": "off",
+    "perf": "off",
+    "restriction": "off",
+    "style": "off",
+    "suspicious": "off"
+  },
+  "env": {
+    "builtin": true
+  },
+  "ignorePatterns": [
+    "**/*.svelte",
+    "**/*.svelte.js",
+    "**/*.svelte.ts"
+  ],
+  "jsPlugins": [
+    {
+      "name": "nostandard",
+      "specifier": "eslint-nostandard/oxlint/plugin"
+    }
+  ],
+  "overrides": [
+    {
+      "files": [
+        "src/**/*.js",
+        "src/**/*.svelte*",
+        "tests/**/*.js"
+      ],
+      "plugins": [
+        "import"
+      ],
+      "rules": {
+        "import-x/max-dependencies": [
+          "warn",
+          {
+            "max": 10
+          }
+        ],
+        "import-x/no-cycle": "off",
+        "import-x/no-default-export": "warn",
+        "import-x/no-duplicates": "error",
+        "import-x/no-dynamic-require": "warn",
+        "import-x/no-mutable-exports": "error",
+        "import-x/no-named-as-default": "off",
+        "import-x/no-named-as-default-member": "error",
+        "import-x/no-namespace": "off",
+        "import-x/no-self-import": "error"
+      }
+    }
+  ],
+  "plugins": [],
+  "rules": {}
+}

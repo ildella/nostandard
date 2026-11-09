@@ -1,0 +1,44 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "off",
+    "nursery": "off",
+    "pedantic": "off",
+    "perf": "off",
+    "restriction": "off",
+    "style": "off",
+    "suspicious": "off"
+  },
+  "env": {
+    "builtin": true
+  },
+  "ignorePatterns": [
+    "**/*.svelte",
+    "**/*.svelte.js",
+    "**/*.svelte.ts"
+  ],
+  "jsPlugins": [
+    {
+      "name": "functional",
+      "specifier": "eslint-plugin-functional"
+    },
+    {
+      "name": "nostandard",
+      "specifier": "eslint-nostandard/oxlint/plugin"
+    }
+  ],
+  "plugins": [],
+  "rules": {
+    "functional/no-class-inheritance": "error",
+    "functional/no-classes": "error",
+    "functional/no-let": "warn",
+    "functional/no-this-expressions": "warn",
+    "no-param-reassign": [
+      "warn",
+      {
+        "props": true
+      }
+    ],
+    "nostandard/no-empty-sentinel": "warn"
+  }
+}
