@@ -30,15 +30,6 @@ const mergeScopes = scopes => {
 
 const nonEmpty = ({ids}) => ids.length > 0
 
-const pairs = config => [
-  config.rules ?? {},
-  ...(config.overrides ?? []).map(override => override.rules ?? {}),
-].flatMap(rules => Object.entries(rules))
-
-export const collectRuleIds = config => [...new Set(
-  pairs(config).map(([id]) => normalizeId(id)),
-)].sort()
-
 export const enabledByScope = config => [
   scopeOf(null, config.rules),
   ...(config.overrides ?? []).map(
@@ -55,12 +46,15 @@ const sameFiles = (left, right) => filesKey(left) === filesKey(right)
 const filesLabel = files => files === null ? 'all files' : files.join(', ')
 
 const scopeFor = (eslintScopes, files) =>
-  eslintScopes.find(scope => sameFiles(scope.files, files)) ??
-  eslintScopes.find(scope => scope.files === null)
+  eslintScopes.find(scope => sameFiles(scope.files, files))
 
 export const assertScopesKnown = (eslintScopes, oxlintScopes) => {
   oxlintScopes.forEach(({files, ids}) => {
-    const scope = scopeFor(eslintScopes, files) ?? {files, ids: []}
+    const scope = scopeFor(eslintScopes, files)
+    if (!scope)
+      throw new Error(
+        `Oxlint scope on ${filesLabel(files)} is missing from the ESLint side`,
+      )
     const unknown = ids.find(id => !scope.ids.includes(id))
     if (!unknown)
       return

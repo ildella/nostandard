@@ -1,0 +1,23 @@
+
+✨ oxlint.json created with 204 rules.
+
+   Skipped 9 rules:
+     - 3 Nursery
+       - no-undef
+       - no-useless-assignment
+       - no-unreachable-loop
+     - 6 Unsupported
+       - no-dupe-args: Superseded by strict mode.
+       - no-octal: Superseded by strict mode.
+       - camelcase: Superseded by `@typescript-eslint/naming-convention`, which accomplishes the same behavior with more flexibility.
+       - no-octal-escape: Superseded by strict mode.
+       - dot-notation: Use `typescript/dot-notation` instead, which we support as a type-aware rule.
+       - no-undef-init: #6456, `unicorn/no-useless-undefined` covers this case.
+
+👉 Re-run with flags to include more:
+     npx @oxlint/migrate config.mjs --with-nursery
+
+🚀 Next:
+     npx oxlint .
+
+

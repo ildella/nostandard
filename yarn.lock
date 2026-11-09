@@ -2406,7 +2406,7 @@
         },
         "peerDependencies": {
           "@eslint/js": "^9.0.0 || ^10.0.0",
-          "@oxlint/migrate": "~1.92.0",
+          "@oxlint/migrate": ">=1.92.0",
           "@stylistic/eslint-plugin": "^5.0.0",
           "@vitest/eslint-plugin": "^1.6.0",
           "eslint": "^9.0.0 || ^10.0.0",
@@ -2417,7 +2417,7 @@
           "eslint-plugin-svelte": "^3.23.0",
           "eslint-plugin-unicorn": ">=74.0.0",
           "globals": "^16.0.0 || ^17.0.0",
-          "oxlint": "~1.92.0"
+          "oxlint": ">=1.92.0"
         },
         "optionalPeerDependencies": [
           "@oxlint/migrate",

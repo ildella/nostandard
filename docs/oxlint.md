@@ -7,23 +7,24 @@ unless you opt in.
 
 ## Versions
 
-The generated configs are produced with Oxlint `1.92.0` and `@oxlint/migrate`
-`1.92.0`. Install `oxlint@1.92.0` (or `~1.92.0`) in your project. You do not
-need `@oxlint/migrate`: it is an optional peer of this package, used only by its
+Oxlint must be at least `1.92.0`; the peer range accepts any newer version, so
+pick and pin the exact version you want. The parity run behind this release used
+Oxlint `1.93.0` and `@oxlint/migrate` `1.92.0`. You do not need
+`@oxlint/migrate`: it is an optional peer of this package, used only by its
 maintainers to regenerate `src/generated`. Consumers never install or run it.
 
 ## Install
 
 ```shell
-yarn add -D eslint-nostandard oxlint@1.92.0
+yarn add -D eslint-nostandard oxlint
 ```
 
 ```shell
-pnpm add -D eslint-nostandard oxlint@1.92.0
+pnpm add -D eslint-nostandard oxlint
 ```
 
 ```shell
-npm install -D eslint-nostandard oxlint@1.92.0
+npm install -D eslint-nostandard oxlint
 ```
 
 ## Configure Oxlint

@@ -62,10 +62,13 @@ test('vitest remainder is the denied rules', () => {
 })
 
 test('an override-only id is not counted as globally covered', () => {
-  const eslintScopes = eslintScopesOf([{
-    files: ['tests/**/*.js'],
-    rules: {'vitest/expect-expect': 'error'},
-  }])
+  const eslintScopes = eslintScopesOf([
+    {rules: {'no-console': 'error'}},
+    {
+      files: ['tests/**/*.js'],
+      rules: {'vitest/expect-expect': 'error'},
+    },
+  ])
   const oxlintScopes = enabledByScope({
     rules: {'no-undefined': 'error'},
     overrides: [{
@@ -77,7 +80,7 @@ test('an override-only id is not counted as globally covered', () => {
     .toThrow(/no-undefined/)
 })
 
-test('an unmatched override falls back to the global ESLint scope', () => {
+test('an unmatched override fails instead of using the global scope', () => {
   const eslintScopes = eslintScopesOf([{rules: {'no-undefined': 'error'}}])
   const oxlintScopes = enabledByScope({
     rules: {},
@@ -86,5 +89,6 @@ test('an unmatched override falls back to the global ESLint scope', () => {
       rules: {'no-undefined': 'error'},
     }],
   })
-  expect(() => assertScopesKnown(eslintScopes, oxlintScopes)).not.toThrow()
+  expect(() => assertScopesKnown(eslintScopes, oxlintScopes))
+    .toThrow(/e2e\/\*\*\/\*\.\*js.*missing/)
 })

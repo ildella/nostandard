@@ -43,6 +43,11 @@ const missingEntriesOf = (base, other, keys) =>
     .filter(key => countOf(base, key) > countOf(other, key))
     .map(key => differenceOf(base, other, key))
 
+const allowanceOf = (allowlist, entry) => {
+  const matches = allowlist[entry.ruleId]
+  return typeof matches === 'function' && matches(entry)
+}
+
 const mismatchOf = ({base, other, allowlist}, key) => {
   const left = base.get(key)
   const right = other.get(key)
@@ -50,12 +55,12 @@ const mismatchOf = ({base, other, allowlist}, key) => {
     return null
   if (joinedLines(left) === joinedLines(right))
     return null
-  return {
+  const entry = {
     ...left,
     baselineLines: linesOf(left),
     comboLines: linesOf(right),
-    allowed: allowlist[left.ruleId],
   }
+  return {...entry, allowed: allowanceOf(allowlist, entry)}
 }
 
 const mismatchesOf = (context, keys) =>
