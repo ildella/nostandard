@@ -58,7 +58,7 @@ export const base = {
     'no-new-wrappers': 'warn',
     'no-object-constructor': 'warn',
     'no-octal-escape': 'error',
-    'no-param-reassign': 'warn',
+    'no-param-reassign': ['warn', {props: true}],
     'no-proto': 'warn',
     'no-restricted-properties': 'warn',
     'no-return-assign': ['warn', 'except-parens'],
