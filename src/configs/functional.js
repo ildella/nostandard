@@ -8,6 +8,7 @@ const rules = {
   'functional/no-loop-statements': 'off',
   'functional/no-this-expressions': 'warn',
   'functional/no-try-statements': 'off',
+  'no-param-reassign': ['warn', {props: true}],
   'nostandard/no-empty-sentinel': 'warn',
 }
 
